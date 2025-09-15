@@ -28,7 +28,7 @@ export default function HomeWhy() {
                     </div>
                 </div>
                 <div className="lg:w-1/2 text-center lg:text-left">
-                    <div className="text-8xl font-bold text-primary/10 mb-4">01</div>
+                    <div className="text-8xl font-bold text-primary mb-4">01</div>
                     <p className="text-xl text-muted-foreground">
                     Know who you&apos;re voting for with detailed candidate information
                     </p>
@@ -47,7 +47,7 @@ export default function HomeWhy() {
                     </div>
                 </div>
                 <div className="lg:w-1/2 text-center lg:text-right">
-                    <div className="text-8xl font-bold text-primary/10 mb-4">02</div>
+                    <div className="text-8xl font-bold text-primary mb-4">02</div>
                     <p className="text-xl text-muted-foreground">
                     Understand the policies that will shape Nepal&apos;s tomorrow
                     </p>
@@ -66,7 +66,7 @@ export default function HomeWhy() {
                     </div>
                 </div>
                 <div className="lg:w-1/2 text-center lg:text-left">
-                    <div className="text-8xl font-bold text-primary/10 mb-4">03</div>
+                    <div className="text-8xl font-bold text-primary mb-4">03</div>
                     <p className="text-xl text-muted-foreground">Stay updated with live election results as they happen</p>
                 </div>
                 </div>
