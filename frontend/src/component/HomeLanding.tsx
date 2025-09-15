@@ -1,4 +1,5 @@
 import { ChevronDown } from "lucide-react"
+import Image from "next/image"
 
 
 export default function HomeLanding() {
@@ -6,10 +7,12 @@ export default function HomeLanding() {
         <div>
             <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
             <div className="absolute inset-0">
-            <img
+            <Image
                 src="/images/nepal-landscape.jpg"
                 alt="Nepal landscape with mountains"
-                className="w-full h-full object-cover opacity-40"
+                fill
+                className="object-cover opacity-40"
+                priority
             />
             <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background/80"></div>
             </div>
@@ -25,7 +28,7 @@ export default function HomeLanding() {
             <p className="text-xl md:text-2xl mb-4 text-foreground font-medium">Your Vote. Your Voice. Your Info Hub.</p>
 
             <p className="text-lg md:text-xl mb-12 text-muted-foreground max-w-2xl mx-auto text-pretty">
-                Discover candidates, agendas, and live vote counts in Nepal's elections.
+                Discover candidates, agendas, and live vote counts in Nepal&apos;s elections.
             </p>
             </div>
 

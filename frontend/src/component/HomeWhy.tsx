@@ -30,7 +30,7 @@ export default function HomeWhy() {
                 <div className="lg:w-1/2 text-center lg:text-left">
                     <div className="text-8xl font-bold text-primary/10 mb-4">01</div>
                     <p className="text-xl text-muted-foreground">
-                    Know who you're voting for with detailed candidate information
+                    Know who you&apos;re voting for with detailed candidate information
                     </p>
                 </div>
                 </div>
@@ -42,14 +42,14 @@ export default function HomeWhy() {
                     <MapPin className="w-16 h-16 text-primary mb-6" />
                     <h3 className="text-3xl font-bold mb-6">Policy Agendas</h3>
                     <p className="text-lg text-foreground leading-relaxed">
-                        Clear breakdown of each candidate's promises, policies, and vision for Nepal's future development.
+                        Clear breakdown of each candidate&apos;s promises, policies, and vision for Nepal&apos;s future development.
                     </p>
                     </div>
                 </div>
                 <div className="lg:w-1/2 text-center lg:text-right">
                     <div className="text-8xl font-bold text-primary/10 mb-4">02</div>
                     <p className="text-xl text-muted-foreground">
-                    Understand the policies that will shape Nepal's tomorrow
+                    Understand the policies that will shape Nepal&apos;s tomorrow
                     </p>
                 </div>
                 </div>

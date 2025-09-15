@@ -8,7 +8,7 @@
   --card-foreground: oklch(0.98 0 0);
   --popover: oklch(0.15 0.05 15);
   --popover-foreground: oklch(0.98 0 0);
-  --primary: oklch(0.55 0.2 15); /* Bright red for primary elements */
+  --primary: oklch(0.45 0.2 15); /* Bright red for primary elements */
   --primary-foreground: oklch(0.98 0 0);
   --secondary: oklch(0.2 0.05 15);
   --secondary-foreground: oklch(0.98 0 0);
