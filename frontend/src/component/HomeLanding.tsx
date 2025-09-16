@@ -19,9 +19,9 @@ export default function HomeLanding() {
 
             {/* Main Hero Content */}
             <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-            <div className="float-animation">
-                <h1 className="text-6xl md:text-9xl font-bold mb-6 text-balance">
-                <span className="text-primary">Chunab</span>
+            <div className="">
+                <h1 className="text-7xl md:text-9xl font-bold mb-6 text-balance">
+                <span className="text-primary">Chunab.</span>
                 </h1>
             </div>
 
