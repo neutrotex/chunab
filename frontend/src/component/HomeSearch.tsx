@@ -6,7 +6,6 @@ import {
   nepalData, 
   getDistrictsByProvince, 
   getConstituenciesByDistrict,
-  type Province,
   type District,
   type Constituency
 } from "../data/nepalConstituencies";
@@ -15,9 +14,9 @@ import {
   type Candidate
 } from "../data/candidates";
 import { 
-  getPartyById,
-  type Party
+  getPartyById
 } from "../data/parties";
+import Image from "next/image";
 
 export default function HomeSearch() {
   const [selectedProvince, setSelectedProvince] = useState<string>("");
@@ -170,24 +169,34 @@ export default function HomeSearch() {
                       className="bg-card/10 backdrop-blur-sm rounded-2xl p-6 border border-border/30 hover:border-primary/50 transition-colors"
                     >
                       <div className="text-center mb-4">
-                        <div className="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4 overflow-hidden">
+                        <div className="w-26 h-26 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4 overflow-hidden">
                           {candidate.photoURL ? (
-                            <img 
+                            <Image 
                               src={candidate.photoURL} 
                               alt={candidate.name}
+                              width={80}
+                              height={80}
                               className="w-full h-full object-cover rounded-full"
+                              onError={(e) => {
+                                e.currentTarget.style.display = 'none';
+                                e.currentTarget.nextElementSibling?.classList.remove('hidden');
+                              }}
                             />
-                          ) : (
-                            <User className="w-10 h-10 text-primary" />
-                          )}
+                          ) : null}
+                          <User className={`w-12 h-12 text-primary ${candidate.photoURL ? 'hidden' : ''}`} />
                         </div>
                         <h4 className="text-xl font-bold text-foreground mb-2">{candidate.name}</h4>
                         <div className="flex items-center justify-center gap-2 mb-2">
                           {party?.symbolURL && (
-                            <img 
+                            <Image 
                               src={party.symbolURL} 
                               alt={party.name}
+                              width={24}
+                              height={24}
                               className="w-6 h-6"
+                              onError={(e) => {
+                                e.currentTarget.style.display = 'none';
+                              }}
                             />
                           )}
                           <span className="text-sm text-muted-foreground">{party?.name || 'Unknown Party'}</span>

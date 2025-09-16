@@ -10,27 +10,37 @@ export const partiesData: Party[] = [
   {
     id: 'party-uml',
     name: 'Nepal Communist Party (UML)',
-    symbolURL: '/images/party-symbols/uml-symbol.png'
+    symbolURL: '/party-symbols/uml-symbol.png'
   },
   {
     id: 'party-nc',
     name: 'Nepali Congress',
-    symbolURL: '/images/party-symbols/nc-symbol.png'
+    symbolURL: '/party-symbols/nc-symbol.png'
   },
   {
     id: 'party-mc',
     name: 'Nepal Communist Party (Maoist Centre)',
-    symbolURL: '/images/party-symbols/mc-symbol.png'
+    symbolURL: '/party-symbols/mc-symbol.png'
   },
   {
     id: 'party-jsp',
     name: 'Janata Samajbadi Party',
-    symbolURL: '/images/party-symbols/jsp-symbol.png'
+    symbolURL: '/party-symbols/jsp-symbol.png'
   },
   {
     id: 'party-rpp',
     name: 'Rastriya Prajatantra Party',
-    symbolURL: '/images/party-symbols/rpp-symbol.png'
+    symbolURL: '/party-symbols/rpp-symbol.png'
+  },
+  {
+    id: 'party-rsp',
+    name: 'Rastriya Swotantra Party',
+    symbolURL: '/party-symbols/rsp-symbol.png'
+  },
+  {
+    id: 'party-unknown',
+    name: 'Independent Party',
+    symbolURL: '/party-symbols/default-party-symbol.png'
   }
 ];
 
