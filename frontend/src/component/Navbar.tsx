@@ -23,12 +23,8 @@ export default function Navbar() {
 
             <div className="hidden md:flex items-center space-x-8">
               <a 
-                href="#home" 
+                href="/home" 
                 className="text-white/80 hover:text-white transition-colors text-sm font-medium"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' });
-                }}
               >
                 Home
               </a>
@@ -52,13 +48,13 @@ export default function Navbar() {
                   onMouseLeave={() => setIsResourcesOpen(false)}
                 >
                   <a 
-                    href="#" 
+                    href="/resources/election-guide" 
                     className="block px-4 py-2 text-sm text-white/80 hover:text-white hover:bg-primary/20 transition-colors"
                   >
                     Election Guide
                   </a>
                   <a 
-                    href="#" 
+                    href="/resources/voting-process" 
                     className="block px-4 py-2 text-sm text-white/80 hover:text-white hover:bg-primary/20 transition-colors"
                   >
                     Voting Process
@@ -123,13 +119,9 @@ export default function Navbar() {
             <div className="py-4 border-t border-border/10">
               <div className="flex flex-col space-y-2">
                 <a 
-                  href="#home" 
+                  href="/home" 
                   className="text-white/80 hover:text-white transition-colors py-2 px-4 text-sm font-medium transform hover:translate-x-2 transition-transform duration-200"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setIsMenuOpen(false);
-                    document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' });
-                  }}
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   Home
                 </a>
@@ -148,14 +140,14 @@ export default function Navbar() {
                     isResourcesOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                   }`}>
                     <a 
-                      href="#" 
+                      href="/resources/election-guide" 
                       className="block py-1 text-sm text-white/60 hover:text-white transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       Election Guide
                     </a>
                     <a 
-                      href="#" 
+                      href="/resources/voting-process" 
                       className="block py-1 text-sm text-white/60 hover:text-white transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >
