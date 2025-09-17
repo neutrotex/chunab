@@ -43,32 +43,26 @@ export default function Footer() {
                         <h3 className="text-lg font-semibold mb-6 text-foreground">Quick Links</h3>
                         <ul className="space-y-3">
                             <li>
-                                <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm flex items-center group">
+                                <a href="#home" className="text-muted-foreground hover:text-primary transition-colors text-sm flex items-center group">
                                     <span>Home</span>
                                     <ExternalLink className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                                 </a>
                             </li>
                             <li>
-                                <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm flex items-center group">
-                                    <span>Candidates</span>
+                                <a href="#search" className="text-muted-foreground hover:text-primary transition-colors text-sm flex items-center group">
+                                    <span>Candidates/Constituency</span>
                                     <ExternalLink className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                                 </a>
                             </li>
                             <li>
-                                <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm flex items-center group">
-                                    <span>Results</span>
+                                <a href="#youth-uprising" className="text-muted-foreground hover:text-primary transition-colors text-sm flex items-center group">
+                                    <span>Youth Uprising</span>
                                     <ExternalLink className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                                 </a>
                             </li>
                             <li>
-                                <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm flex items-center group">
-                                    <span>About</span>
-                                    <ExternalLink className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm flex items-center group">
-                                    <span>Search</span>
+                                <a href="#why-chunab" className="text-muted-foreground hover:text-primary transition-colors text-sm flex items-center group">
+                                    <span>Why Chunab</span>
                                     <ExternalLink className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                                 </a>
                             </li>
@@ -88,12 +82,6 @@ export default function Footer() {
                             <li>
                                 <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm flex items-center group">
                                     <span>Voting Process</span>
-                                    <ExternalLink className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm flex items-center group">
-                                    <span>Constituency Map</span>
                                     <ExternalLink className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                                 </a>
                             </li>
