@@ -26,6 +26,12 @@ export default function HomeSearch() {
   const [constituencies, setConstituencies] = useState<Constituency[]>([]);
   const [candidates, setCandidates] = useState<Candidate[]>([]);
   const [showCandidates, setShowCandidates] = useState<boolean>(false);
+  const [isClient, setIsClient] = useState(false);
+
+  // Ensure client-side rendering
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   // Reset dependent dropdowns when province changes
   useEffect(() => {
@@ -76,7 +82,7 @@ export default function HomeSearch() {
   return (
     <div>
       {/* Constituency Search Section */}
-      <section className="py-24 px-6 bg-black">
+      <section id="search" className="py-24 px-6 bg-black">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-5xl md:text-7xl font-bold mb-6 text-balance">
@@ -89,69 +95,75 @@ export default function HomeSearch() {
 
           {/* Search Form */}
           <div className="bg-card/10 backdrop-blur-sm rounded-2xl p-8 border border-border/30">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-              {/* Province Dropdown */}
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-foreground">Province</label>
-                <div className="relative">
-                  <select
-                    value={selectedProvince}
-                    onChange={(e) => setSelectedProvince(e.target.value)}
-                    className="w-full px-4 py-3 bg-input text-secondary-foreground rounded-xl border border-border/30 focus:border-primary focus:outline-none focus:ring-2 focus:ring-ring/20 appearance-none pr-10"
-                  >
-                    <option value="">Select Province</option>
-                    {nepalData.map((province) => (
-                      <option key={province.id} value={province.id}>
-                        {province.name}
-                      </option>
-                    ))}
-                  </select>
-                  <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-muted-foreground pointer-events-none" />
-                </div>
+            {!isClient ? (
+              <div className="flex items-center justify-center py-8">
+                <div className="text-muted-foreground">Loading...</div>
               </div>
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                {/* Province Dropdown */}
+                <div className="space-y-2">
+                  <label className="text-sm font-medium text-foreground">Province</label>
+                  <div className="relative">
+                    <select
+                      value={selectedProvince}
+                      onChange={(e) => setSelectedProvince(e.target.value)}
+                      className="w-full px-4 py-3 bg-input text-secondary-foreground rounded-xl border border-border/30 focus:border-primary focus:outline-none focus:ring-2 focus:ring-ring/20 appearance-none pr-10"
+                    >
+                      <option value="">Select Province</option>
+                      {nepalData.map((province) => (
+                        <option key={province.id} value={province.id}>
+                          {province.name}
+                        </option>
+                      ))}
+                    </select>
+                    <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-muted-foreground pointer-events-none" />
+                  </div>
+                </div>
 
-              {/* District Dropdown */}
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-foreground">District</label>
-                <div className="relative">
-                  <select
-                    value={selectedDistrict}
-                    onChange={(e) => setSelectedDistrict(e.target.value)}
-                    disabled={!selectedProvince}
-                    className="w-full px-4 py-3 bg-input text-secondary-foreground rounded-xl border border-border/30 focus:border-primary focus:outline-none focus:ring-2 focus:ring-ring/20 appearance-none pr-10 disabled:opacity-50 disabled:cursor-not-allowed"
-                  >
-                    <option value="">Select District</option>
-                    {districts.map((district) => (
-                      <option key={district.id} value={district.id}>
-                        {district.name}
-                      </option>
-                    ))}
-                  </select>
-                  <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-muted-foreground pointer-events-none" />
+                {/* District Dropdown */}
+                <div className="space-y-2">
+                  <label className="text-sm font-medium text-foreground">District</label>
+                  <div className="relative">
+                    <select
+                      value={selectedDistrict}
+                      onChange={(e) => setSelectedDistrict(e.target.value)}
+                      disabled={!selectedProvince}
+                      className="w-full px-4 py-3 bg-input text-secondary-foreground rounded-xl border border-border/30 focus:border-primary focus:outline-none focus:ring-2 focus:ring-ring/20 appearance-none pr-10 disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                      <option value="">Select District</option>
+                      {districts.map((district) => (
+                        <option key={district.id} value={district.id}>
+                          {district.name}
+                        </option>
+                      ))}
+                    </select>
+                    <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-muted-foreground pointer-events-none" />
+                  </div>
                 </div>
-              </div>
 
-              {/* Constituency Dropdown */}
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-foreground">Constituency</label>
-                <div className="relative">
-                  <select
-                    value={selectedConstituency}
-                    onChange={(e) => setSelectedConstituency(e.target.value)}
-                    disabled={!selectedDistrict}
-                    className="w-full px-4 py-3 bg-input text-secondary-foreground rounded-xl border border-border/30 focus:border-primary focus:outline-none focus:ring-2 focus:ring-ring/20 appearance-none pr-10 disabled:opacity-50 disabled:cursor-not-allowed"
-                  >
-                    <option value="">Select Constituency</option>
-                    {constituencies.map((constituency) => (
-                      <option key={constituency.id} value={constituency.id}>
-                        {constituency.name}
-                      </option>
-                    ))}
-                  </select>
-                  <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-muted-foreground pointer-events-none" />
+                {/* Constituency Dropdown */}
+                <div className="space-y-2">
+                  <label className="text-sm font-medium text-foreground">Constituency</label>
+                  <div className="relative">
+                    <select
+                      value={selectedConstituency}
+                      onChange={(e) => setSelectedConstituency(e.target.value)}
+                      disabled={!selectedDistrict}
+                      className="w-full px-4 py-3 bg-input text-secondary-foreground rounded-xl border border-border/30 focus:border-primary focus:outline-none focus:ring-2 focus:ring-ring/20 appearance-none pr-10 disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                      <option value="">Select Constituency</option>
+                      {constituencies.map((constituency) => (
+                        <option key={constituency.id} value={constituency.id}>
+                          {constituency.name}
+                        </option>
+                      ))}
+                    </select>
+                    <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-muted-foreground pointer-events-none" />
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
           </div>
 
           {/* Candidates Display Section */}

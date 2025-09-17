@@ -3,6 +3,7 @@ import HomeWhy from "@/component/HomeWhy"
 import HomeSearch from "@/component/HomeSearch"
 import Navbar from "@/component/Navbar"
 import Footer from "@/component/Footer"
+import YouthUprising from "@/component/YouthUprising"
 
 export default function Home() {
     return (
@@ -10,6 +11,7 @@ export default function Home() {
             <Navbar />
             <HomeLanding />
             <HomeSearch />
+            <YouthUprising />
             <HomeWhy />
             <Footer />
         </div>

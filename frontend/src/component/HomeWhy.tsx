@@ -4,7 +4,7 @@ import { Users , MapPin, BarChart3 } from "lucide-react"
 export default function HomeWhy() {
     return (
         <div>         
-        <section className="py-32 px-6 relative overflow-hidden bg-black">
+        <section id="why-chunab" className="py-32 px-6 relative overflow-hidden bg-black">
             <div className="max-w-7xl mx-auto">
             <div className="text-center mb-20">
                 <h2 className="text-5xl md:text-7xl font-bold mb-6">
