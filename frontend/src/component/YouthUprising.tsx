@@ -30,7 +30,7 @@ export default function YouthUprising() {
           <div className="max-w-4xl mx-auto space-y-8">
             <p className="text-white leading-relaxed text-xl md:text-2xl font-light text-center">
               On September 8–9, 2025, Nepal witnessed a powerful youth-led protest that shook the foundations of the
-              nation's politics. Sparked by the government's controversial ban on major social media platforms, thousands
+              nation&apos;s politics. Sparked by the government&apos;s controversial ban on major social media platforms, thousands
               of young people took to the streets demanding an end to corruption, censorship, and systemic inequality.
             </p>
   

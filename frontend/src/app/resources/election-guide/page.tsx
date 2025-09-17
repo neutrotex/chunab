@@ -1,6 +1,7 @@
 import Navbar from "@/component/Navbar"
 import Footer from "@/component/Footer"
 import { ChevronDown, Users, BarChart3, AlertCircle, FileText, Calendar, Vote } from "lucide-react"
+import Image from "next/image"
 
 export default function ElectionGuide() {
     return (
@@ -9,10 +10,11 @@ export default function ElectionGuide() {
             
             <section className="relative h-[50vh] flex items-center justify-center overflow-hidden pt-16">
                 <div className="absolute inset-0">
-                <img
+                <Image
                     src="/images/nepal-landscape.jpg"
                     alt="Nepal landscape with mountains"
-                    className="w-full h-full object-cover opacity-30"
+                    fill
+                    className="object-cover opacity-30"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background/90"></div>
                 </div>
@@ -127,7 +129,7 @@ export default function ElectionGuide() {
                     How to <span className="text-primary">Vote</span>
                     </h2>
                     <p className="text-xl text-muted-foreground">
-                    Step-by-step guide to participating in Nepal's democratic process
+                    Step-by-step guide to participating in Nepal&apos;s democratic process
                     </p>
                 </div>
 
@@ -179,7 +181,7 @@ export default function ElectionGuide() {
                     <h2 className="text-4xl md:text-5xl font-bold mb-6">
                     Voting <span className="text-primary">Eligibility</span>
                     </h2>
-                    <p className="text-xl text-muted-foreground">Requirements to participate in Nepal's elections</p>
+                    <p className="text-xl text-muted-foreground">Requirements to participate in Nepal&apos;s elections</p>
                 </div>
 
                 <div className="grid md:grid-cols-3 gap-12">
@@ -211,7 +213,7 @@ export default function ElectionGuide() {
                 <div className="mt-16 text-center space-y-6">
                     <h3 className="text-3xl font-bold">For Nepalis Abroad</h3>
                     <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-                    Supreme Court ruling allows Nepali citizens abroad who haven't renounced citizenship and have voter ID to
+                    Supreme Court ruling allows Nepali citizens abroad who haven&apos;t renounced citizenship and have voter ID to
                     vote via diplomatic missions. Implementation details are still under discussion.
                     </p>
                 </div>
@@ -224,7 +226,7 @@ export default function ElectionGuide() {
                     <h2 className="text-4xl md:text-5xl font-bold mb-6">
                     Why It <span className="text-primary">Matters</span>
                     </h2>
-                    <p className="text-xl text-muted-foreground">Your vote shapes Nepal's future</p>
+                    <p className="text-xl text-muted-foreground">Your vote shapes Nepal&apos;s future</p>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-12">

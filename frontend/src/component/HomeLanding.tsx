@@ -17,7 +17,7 @@ export default function HomeLanding() {
         }, 3000); // Switch every 3 seconds
 
         return () => clearInterval(interval);
-    }, []);
+    }, [slogans.length]);
 
     return (
         <div>
