@@ -16,7 +16,7 @@ export default function ElectionGuide() {
                     fill
                     className="object-cover opacity-30"
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background/90"></div>
+                <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background/80"></div>
                 </div>
                 <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
                     <h2 className="text-4xl md:text-6xl font-bold mb-6 text-foreground">
@@ -30,80 +30,80 @@ export default function ElectionGuide() {
             </section>
 
             <section className="py-24 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Federal <span className="text-primary">Parliament</span>
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Nepal has a bicameral legislature with two houses working together to govern the nation
-            </p>
-          </div>
+                <div className="max-w-6xl mx-auto">
+                <div className="text-center mb-16">
+                    <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                    Federal <span className="text-primary">Parliament</span>
+                    </h2>
+                    <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                    Nepal has a bicameral legislature with two houses working together to govern the nation
+                    </p>
+                </div>
 
-          <div className="grid md:grid-cols-2 gap-16">
-            {/* House of Representatives */}
-            <div className="space-y-6">
-              <div className="flex items-center mb-8">
-                <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mr-6">
-                  <Users className="w-8 h-8 text-primary" />
-                </div>
-                <div>
-                  <h3 className="text-3xl font-bold">House of Representatives</h3>
-                  <p className="text-primary text-lg">Pratinidhi Sabha — the lower house</p>
-                </div>
-              </div>
-              <div className="space-y-4 pl-4">
-                <div className="flex justify-between items-center py-2">
-                  <span className="text-lg font-medium">Total Seats:</span>
-                  <span className="text-primary font-bold text-xl">275 members</span>
-                </div>
-                <div className="flex justify-between items-center py-2">
-                  <span className="text-lg font-medium">FPTP Seats:</span>
-                  <span className="text-lg">165 seats</span>
-                </div>
-                <div className="flex justify-between items-center py-2">
-                  <span className="text-lg font-medium">PR Seats:</span>
-                  <span className="text-lg">110 seats</span>
-                </div>
-                <div className="flex justify-between items-center py-2">
-                  <span className="text-lg font-medium">Term:</span>
-                  <span className="text-lg">5 years</span>
-                </div>
-              </div>
-            </div>
+                <div className="grid md:grid-cols-2 gap-16">
+                    {/* House of Representatives */}
+                    <div className="space-y-6">
+                    <div className="flex items-center mb-8">
+                        <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mr-6">
+                        <Users className="w-8 h-8 text-primary" />
+                        </div>
+                        <div>
+                        <h3 className="text-3xl font-bold">House of Representatives</h3>
+                        <p className="text-primary text-lg">Pratinidhi Sabha — the lower house</p>
+                        </div>
+                    </div>
+                    <div className="space-y-4 pl-4">
+                        <div className="flex justify-between items-center py-2">
+                        <span className="text-lg font-medium">Total Seats:</span>
+                        <span className="text-primary font-bold text-xl">275 members</span>
+                        </div>
+                        <div className="flex justify-between items-center py-2">
+                        <span className="text-lg font-medium">FPTP Seats:</span>
+                        <span className="text-lg">165 seats</span>
+                        </div>
+                        <div className="flex justify-between items-center py-2">
+                        <span className="text-lg font-medium">PR Seats:</span>
+                        <span className="text-lg">110 seats</span>
+                        </div>
+                        <div className="flex justify-between items-center py-2">
+                        <span className="text-lg font-medium">Term:</span>
+                        <span className="text-lg">5 years</span>
+                        </div>
+                    </div>
+                    </div>
 
-            {/* National Assembly */}
-            <div className="space-y-6">
-              <div className="flex items-center mb-8">
-                <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mr-6">
-                  <BarChart3 className="w-8 h-8 text-primary" />
+                    {/* National Assembly */}
+                    <div className="space-y-6">
+                    <div className="flex items-center mb-8">
+                        <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mr-6">
+                        <BarChart3 className="w-8 h-8 text-primary" />
+                        </div>
+                        <div>
+                        <h3 className="text-3xl font-bold">National Assembly</h3>
+                        <p className="text-primary text-lg">Rastriya Sabha — the upper house</p>
+                        </div>
+                    </div>
+                    <div className="space-y-4 pl-4">
+                        <div className="flex justify-between items-center py-2">
+                        <span className="text-lg font-medium">Total Seats:</span>
+                        <span className="text-primary font-bold text-xl">59 members</span>
+                        </div>
+                        <div className="flex justify-between items-center py-2">
+                        <span className="text-lg font-medium">Elected:</span>
+                        <span className="text-lg">56 members</span>
+                        </div>
+                        <div className="flex justify-between items-center py-2">
+                        <span className="text-lg font-medium">Appointed:</span>
+                        <span className="text-lg">3 members</span>
+                        </div>
+                        <div className="flex justify-between items-center py-2">
+                        <span className="text-lg font-medium">Term:</span>
+                        <span className="text-lg">6 years</span>
+                        </div>
+                    </div>
+                    </div>
                 </div>
-                <div>
-                  <h3 className="text-3xl font-bold">National Assembly</h3>
-                  <p className="text-primary text-lg">Rastriya Sabha — the upper house</p>
                 </div>
-              </div>
-              <div className="space-y-4 pl-4">
-                <div className="flex justify-between items-center py-2">
-                  <span className="text-lg font-medium">Total Seats:</span>
-                  <span className="text-primary font-bold text-xl">59 members</span>
-                </div>
-                <div className="flex justify-between items-center py-2">
-                  <span className="text-lg font-medium">Elected:</span>
-                  <span className="text-lg">56 members</span>
-                </div>
-                <div className="flex justify-between items-center py-2">
-                  <span className="text-lg font-medium">Appointed:</span>
-                  <span className="text-lg">3 members</span>
-                </div>
-                <div className="flex justify-between items-center py-2">
-                  <span className="text-lg font-medium">Term:</span>
-                  <span className="text-lg">6 years</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
             </section>
 
             <section className="py-20 px-6">
