@@ -22,7 +22,7 @@ export default function VotingProcess() {
           number: 2,
           title: "Get Your Voter ID",
           icon: <FileText className="w-8 h-8" />,
-          description: "Once registered, you'll be issued a voter identity card.",
+          description: "Once registered, you&apos;ll be issued a voter identity card.",
           details: ["This card is required on election day to cast your vote"],
         },
         {
@@ -46,7 +46,7 @@ export default function VotingProcess() {
           icon: <CheckCircle className="w-8 h-8" />,
           description: "Your identity will be verified against the voter list.",
           details: [
-            "You'll receive two ballot papers:",
+            "You&apos;ll receive two ballot papers:",
             "FPTP ballot → for choosing a candidate in your constituency",
             "PR ballot → for choosing a political party",
             "Go into the secret voting booth",
@@ -56,7 +56,7 @@ export default function VotingProcess() {
           number: 6,
           title: "Casting Your Vote",
           icon: <Vote className="w-8 h-8" />,
-          description: "On the FPTP ballot, stamp/mark your chosen candidate's symbol.",
+          description: "On the FPTP ballot, stamp/mark your chosen candidate&apos;s symbol.",
           details: [
             "On the PR ballot, stamp/mark the party you want to support",
             "Be careful not to make stray marks — unclear votes may be invalid",
@@ -67,7 +67,7 @@ export default function VotingProcess() {
           title: "Submitting the Ballots",
           icon: <Users className="w-8 h-8" />,
           description: "Fold each ballot as instructed and drop it into the designated sealed ballot boxes.",
-          details: ["Your finger may be inked to indicate that you've voted"],
+          details: ["Your finger may be inked to indicate that you&apos;ve voted"],
         },
         {
           number: 8,
@@ -108,7 +108,7 @@ export default function VotingProcess() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-20">
               <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
-                Your complete step-by-step guide to participating in Nepal's democratic process
+                Your complete step-by-step guide to participating in Nepal&apos;s democratic process
               </p>
             </div>
     
@@ -159,7 +159,7 @@ export default function VotingProcess() {
                 <div className="text-left">
                   <h3 className="text-2xl font-bold mb-2">Ready to Vote?</h3>
                   <p className="text-muted-foreground">
-                    Make sure you're registered and know your polling station location
+                    Make sure you&apos;re registered and know your polling station location
                   </p>
                 </div>
               </div>
