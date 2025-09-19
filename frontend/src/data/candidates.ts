@@ -8,7 +8,7 @@ export interface Candidate {
   
   // Political Info
   partyId: string; // Reference to party ID
-  pastElectionHistory: string; // Simple string description
+  pastExperience: string; // Simple string description
   agendas: string[]; // Simple array of agenda strings
   
   // Public Declarations
@@ -37,7 +37,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/krishna_chhetri.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Social worker",
+    "pastExperience": "Social worker",
     "agendas": [
       "Tourism promotion",
       "Digital connectivity",
@@ -60,7 +60,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/gita_yadav.jpg",
     "partyId": "party-nc",
-    "pastElectionHistory": "Social worker",
+    "pastExperience": "Social worker",
     "agendas": [
       "Agricultural support",
       "Clean water access",
@@ -83,7 +83,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/raj_shrestha.jpg",
     "partyId": "party-uml",
-    "pastElectionHistory": "Former Minister",
+    "pastExperience": "Former Minister",
     "agendas": [
       "Education reform",
       "Flood control",
@@ -106,7 +106,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/manjita_pokharel.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "First time candidate",
+    "pastExperience": "First time candidate",
     "agendas": [
       "Electricity expansion",
       "Job creation",
@@ -129,7 +129,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/anita_pandey.jpg",
     "partyId": "party-rpp",
-    "pastElectionHistory": "Social worker",
+    "pastExperience": "Social worker",
     "agendas": [
       "Infrastructure development",
       "Anti-corruption measures",
@@ -152,7 +152,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sunita_maharjan.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Tourism promotion",
       "Road construction",
@@ -175,7 +175,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/asha_chhetri.jpg",
     "partyId": "party-rpp",
-    "pastElectionHistory": "Longtime party worker",
+    "pastExperience": "Longtime party worker",
     "agendas": [
       "Anti-corruption measures",
       "Electricity expansion",
@@ -198,7 +198,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/prakash_karki.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Business leader",
+    "pastExperience": "Business leader",
     "agendas": [
       "Job creation",
       "Healthcare improvement",
@@ -221,7 +221,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/hari_maharjan.jpg",
     "partyId": "party-rsp",
-    "pastElectionHistory": "Business leader",
+    "pastExperience": "Business leader",
     "agendas": [
       "Electricity expansion",
       "Road construction",
@@ -244,7 +244,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/kunti_gurung.jpg",
     "partyId": "party-nc",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Women empowerment",
       "Agricultural support",
@@ -267,7 +267,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sabita_chhetri.jpg",
     "partyId": "party-rpp",
-    "pastElectionHistory": "Local activist",
+    "pastExperience": "Local activist",
     "agendas": [
       "Youth development",
       "Agricultural support",
@@ -290,7 +290,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/kunti_maharjan.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Business leader",
+    "pastExperience": "Business leader",
     "agendas": [
       "Flood control",
       "Youth development",
@@ -313,7 +313,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/krishna_pokharel.jpg",
     "partyId": "party-uml",
-    "pastElectionHistory": "Former Minister",
+    "pastExperience": "Former Minister",
     "agendas": [
       "Women empowerment",
       "Road construction",
@@ -336,7 +336,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/krishna_pokharel.jpg",
     "partyId": "party-rpp",
-    "pastElectionHistory": "Local activist",
+    "pastExperience": "Local activist",
     "agendas": [
       "Job creation",
       "Clean water access",
@@ -359,7 +359,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sabita_gurung.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Local activist",
+    "pastExperience": "Local activist",
     "agendas": [
       "Forest conservation",
       "Road construction",
@@ -382,7 +382,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sunita_pandey.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Business leader",
+    "pastExperience": "Business leader",
     "agendas": [
       "Job creation",
       "Agricultural support",
@@ -405,7 +405,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/prakash_adhikari.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Longtime party worker",
+    "pastExperience": "Longtime party worker",
     "agendas": [
       "Education reform",
       "Digital connectivity",
@@ -428,7 +428,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/gita_rai.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Local activist",
+    "pastExperience": "Local activist",
     "agendas": [
       "Women empowerment",
       "Job creation",
@@ -451,7 +451,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/maya_subedi.jpg",
     "partyId": "party-uml",
-    "pastElectionHistory": "First time candidate",
+    "pastExperience": "First time candidate",
     "agendas": [
       "Clean water access",
       "Flood control",
@@ -474,7 +474,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/priya_shrestha.jpg",
     "partyId": "party-uml",
-    "pastElectionHistory": "Social worker",
+    "pastExperience": "Social worker",
     "agendas": [
       "Youth development",
       "Education reform",
@@ -497,7 +497,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sabita_karki.jpg",
     "partyId": "party-uml",
-    "pastElectionHistory": "Local activist",
+    "pastExperience": "Local activist",
     "agendas": [
       "Digital connectivity",
       "Clean water access",
@@ -520,7 +520,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/suman_chhetri.jpg",
     "partyId": "party-rpp",
-    "pastElectionHistory": "Former Minister",
+    "pastExperience": "Former Minister",
     "agendas": [
       "Clean water access",
       "Local industry support",
@@ -543,7 +543,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/bishal_bhatt.jpg",
     "partyId": "party-nc",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Youth development",
       "Anti-corruption measures",
@@ -566,7 +566,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/krishna_gurung.jpg",
     "partyId": "party-rsp",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Healthcare improvement",
       "Flood control",
@@ -589,7 +589,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/kamal_rai.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "First time candidate",
+    "pastExperience": "First time candidate",
     "agendas": [
       "Digital connectivity",
       "Anti-corruption measures",
@@ -612,7 +612,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/hari_shrestha.jpg",
     "partyId": "party-rsp",
-    "pastElectionHistory": "First time candidate",
+    "pastExperience": "First time candidate",
     "agendas": [
       "Local industry support",
       "Infrastructure development",
@@ -635,7 +635,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/ram_karki.jpg",
     "partyId": "party-rpp",
-    "pastElectionHistory": "Social worker",
+    "pastExperience": "Social worker",
     "agendas": [
       "Digital connectivity",
       "Youth development",
@@ -658,7 +658,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/priya_yadav.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Social worker",
+    "pastExperience": "Social worker",
     "agendas": [
       "Road construction",
       "Electricity expansion",
@@ -681,7 +681,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/gita_karki.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Social worker",
+    "pastExperience": "Social worker",
     "agendas": [
       "Flood control",
       "Digital connectivity",
@@ -704,7 +704,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/dipak_thapa.jpg",
     "partyId": "party-nc",
-    "pastElectionHistory": "First time candidate",
+    "pastExperience": "First time candidate",
     "agendas": [
       "Flood control",
       "Electricity expansion",
@@ -727,7 +727,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/dipak_pokharel.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Healthcare improvement",
       "Electricity expansion",
@@ -750,7 +750,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/maya_pandey.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Business leader",
+    "pastExperience": "Business leader",
     "agendas": [
       "Local industry support",
       "Electricity expansion",
@@ -773,7 +773,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/gita_karki.jpg",
     "partyId": "party-nc",
-    "pastElectionHistory": "Local activist",
+    "pastExperience": "Local activist",
     "agendas": [
       "Tourism promotion",
       "Electricity expansion",
@@ -796,7 +796,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/ram_chhetri.jpg",
     "partyId": "party-nc",
-    "pastElectionHistory": "First time candidate",
+    "pastExperience": "First time candidate",
     "agendas": [
       "Job creation",
       "Local industry support",
@@ -819,7 +819,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/gita_rai.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Education reform",
       "Infrastructure development",
@@ -842,7 +842,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/gita_maharjan.jpg",
     "partyId": "party-rsp",
-    "pastElectionHistory": "Social worker",
+    "pastExperience": "Social worker",
     "agendas": [
       "Flood control",
       "Local industry support",
@@ -865,7 +865,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sujata_thapa.jpg",
     "partyId": "party-uml",
-    "pastElectionHistory": "Local activist",
+    "pastExperience": "Local activist",
     "agendas": [
       "Road construction",
       "Local industry support",
@@ -888,7 +888,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/narayan_subedi.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Business leader",
+    "pastExperience": "Business leader",
     "agendas": [
       "Women empowerment",
       "Digital connectivity",
@@ -911,7 +911,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/ram_maharjan.jpg",
     "partyId": "party-rsp",
-    "pastElectionHistory": "Social worker",
+    "pastExperience": "Social worker",
     "agendas": [
       "Local industry support",
       "Infrastructure development",
@@ -934,7 +934,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/narayan_adhikari.jpg",
     "partyId": "party-uml",
-    "pastElectionHistory": "First time candidate",
+    "pastExperience": "First time candidate",
     "agendas": [
       "Healthcare improvement",
       "Youth development",
@@ -957,7 +957,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/suraj_thapa.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Former Minister",
+    "pastExperience": "Former Minister",
     "agendas": [
       "Road construction",
       "Agricultural support",
@@ -980,7 +980,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/priya_gurung.jpg",
     "partyId": "party-nc",
-    "pastElectionHistory": "Former Minister",
+    "pastExperience": "Former Minister",
     "agendas": [
       "Healthcare improvement",
       "Clean water access",
@@ -1003,7 +1003,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sunita_bhatt.jpg",
     "partyId": "party-rpp",
-    "pastElectionHistory": "Social worker",
+    "pastExperience": "Social worker",
     "agendas": [
       "Road construction",
       "Flood control",
@@ -1026,7 +1026,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sunita_rai.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Former Minister",
+    "pastExperience": "Former Minister",
     "agendas": [
       "Healthcare improvement",
       "Job creation",
@@ -1049,7 +1049,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sujata_karki.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Local activist",
+    "pastExperience": "Local activist",
     "agendas": [
       "Agricultural support",
       "Youth development",
@@ -1072,7 +1072,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sunita_thapa.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Social worker",
+    "pastExperience": "Social worker",
     "agendas": [
       "Anti-corruption measures",
       "Local industry support",
@@ -1095,7 +1095,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sunita_maharjan.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Former Minister",
+    "pastExperience": "Former Minister",
     "agendas": [
       "Local industry support",
       "Women empowerment",
@@ -1118,7 +1118,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/hari_shrestha.jpg",
     "partyId": "party-rpp",
-    "pastElectionHistory": "Former Minister",
+    "pastExperience": "Former Minister",
     "agendas": [
       "Forest conservation",
       "Healthcare improvement",
@@ -1141,7 +1141,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/kunti_rai.jpg",
     "partyId": "party-rsp",
-    "pastElectionHistory": "First time candidate",
+    "pastExperience": "First time candidate",
     "agendas": [
       "Infrastructure development",
       "Agricultural support",
@@ -1164,7 +1164,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/maya_pokharel.jpg",
     "partyId": "party-uml",
-    "pastElectionHistory": "Social worker",
+    "pastExperience": "Social worker",
     "agendas": [
       "Road construction",
       "Forest conservation",
@@ -1187,7 +1187,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sujata_thapa.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Education reform",
       "Local industry support",
@@ -1210,7 +1210,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/raj_pandey.jpg",
     "partyId": "party-rsp",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Tourism promotion",
       "Anti-corruption measures",
@@ -1233,7 +1233,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/ram_subedi.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Social worker",
+    "pastExperience": "Social worker",
     "agendas": [
       "Clean water access",
       "Flood control",
@@ -1256,7 +1256,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/kunti_chhetri.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "First time candidate",
+    "pastExperience": "First time candidate",
     "agendas": [
       "Tourism promotion",
       "Clean water access",
@@ -1279,7 +1279,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/anita_adhikari.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Longtime party worker",
+    "pastExperience": "Longtime party worker",
     "agendas": [
       "Women empowerment",
       "Healthcare improvement",
@@ -1302,7 +1302,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/anita_rai.jpg",
     "partyId": "party-uml",
-    "pastElectionHistory": "Local activist",
+    "pastExperience": "Local activist",
     "agendas": [
       "Flood control",
       "Road construction",
@@ -1325,7 +1325,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/suraj_pokharel.jpg",
     "partyId": "party-rpp",
-    "pastElectionHistory": "First time candidate",
+    "pastExperience": "First time candidate",
     "agendas": [
       "Local industry support",
       "Forest conservation",
@@ -1348,7 +1348,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/suraj_rai.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Youth development",
       "Infrastructure development",
@@ -1371,7 +1371,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/asha_rai.jpg",
     "partyId": "party-rsp",
-    "pastElectionHistory": "Business leader",
+    "pastExperience": "Business leader",
     "agendas": [
       "Healthcare improvement",
       "Flood control",
@@ -1394,7 +1394,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/suman_bhatt.jpg",
     "partyId": "party-uml",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Flood control",
       "Local industry support",
@@ -1417,7 +1417,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/anita_yadav.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Job creation",
       "Clean water access",
@@ -1440,7 +1440,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/kunti_adhikari.jpg",
     "partyId": "party-rpp",
-    "pastElectionHistory": "Business leader",
+    "pastExperience": "Business leader",
     "agendas": [
       "Agricultural support",
       "Infrastructure development",
@@ -1463,7 +1463,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/narayan_rai.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Social worker",
+    "pastExperience": "Social worker",
     "agendas": [
       "Digital connectivity",
       "Job creation",
@@ -1486,7 +1486,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/kunti_rai.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Local activist",
+    "pastExperience": "Local activist",
     "agendas": [
       "Education reform",
       "Tourism promotion",
@@ -1509,7 +1509,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/kunti_pokharel.jpg",
     "partyId": "party-uml",
-    "pastElectionHistory": "First time candidate",
+    "pastExperience": "First time candidate",
     "agendas": [
       "Women empowerment",
       "Clean water access",
@@ -1532,7 +1532,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/hari_subedi.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Social worker",
+    "pastExperience": "Social worker",
     "agendas": [
       "Agricultural support",
       "Women empowerment",
@@ -1555,7 +1555,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sita_subedi.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Business leader",
+    "pastExperience": "Business leader",
     "agendas": [
       "Electricity expansion",
       "Youth development",
@@ -1578,7 +1578,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sita_adhikari.jpg",
     "partyId": "party-rpp",
-    "pastElectionHistory": "First time candidate",
+    "pastExperience": "First time candidate",
     "agendas": [
       "Tourism promotion",
       "Women empowerment",
@@ -1601,7 +1601,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/manjita_pokharel.jpg",
     "partyId": "party-nc",
-    "pastElectionHistory": "Business leader",
+    "pastExperience": "Business leader",
     "agendas": [
       "Agricultural support",
       "Healthcare improvement",
@@ -1624,7 +1624,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/narayan_karki.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Former Minister",
+    "pastExperience": "Former Minister",
     "agendas": [
       "Clean water access",
       "Education reform",
@@ -1647,7 +1647,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sita_rai.jpg",
     "partyId": "party-rpp",
-    "pastElectionHistory": "First time candidate",
+    "pastExperience": "First time candidate",
     "agendas": [
       "Flood control",
       "Anti-corruption measures",
@@ -1670,7 +1670,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/anita_thapa.jpg",
     "partyId": "party-rsp",
-    "pastElectionHistory": "First time candidate",
+    "pastExperience": "First time candidate",
     "agendas": [
       "Road construction",
       "Healthcare improvement",
@@ -1693,7 +1693,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/hari_chhetri.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Women empowerment",
       "Anti-corruption measures",
@@ -1716,7 +1716,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/prakash_subedi.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Agricultural support",
       "Forest conservation",
@@ -1739,7 +1739,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/prakash_pandey.jpg",
     "partyId": "party-rsp",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Youth development",
       "Digital connectivity",
@@ -1762,7 +1762,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/raj_yadav.jpg",
     "partyId": "party-nc",
-    "pastElectionHistory": "Longtime party worker",
+    "pastExperience": "Longtime party worker",
     "agendas": [
       "Anti-corruption measures",
       "Infrastructure development",
@@ -1785,7 +1785,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/manjita_chhetri.jpg",
     "partyId": "party-nc",
-    "pastElectionHistory": "First time candidate",
+    "pastExperience": "First time candidate",
     "agendas": [
       "Education reform",
       "Forest conservation",
@@ -1808,7 +1808,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/prakash_thapa.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Former Minister",
+    "pastExperience": "Former Minister",
     "agendas": [
       "Infrastructure development",
       "Job creation",
@@ -1831,7 +1831,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/maya_bhatt.jpg",
     "partyId": "party-uml",
-    "pastElectionHistory": "Former Minister",
+    "pastExperience": "Former Minister",
     "agendas": [
       "Clean water access",
       "Tourism promotion",
@@ -1854,7 +1854,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/anita_thapa.jpg",
     "partyId": "party-rsp",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Flood control",
       "Forest conservation",
@@ -1877,7 +1877,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/kamal_adhikari.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Social worker",
+    "pastExperience": "Social worker",
     "agendas": [
       "Education reform",
       "Women empowerment",
@@ -1900,7 +1900,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/narayan_gurung.jpg",
     "partyId": "party-uml",
-    "pastElectionHistory": "Former Minister",
+    "pastExperience": "Former Minister",
     "agendas": [
       "Job creation",
       "Electricity expansion",
@@ -1923,7 +1923,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sabita_maharjan.jpg",
     "partyId": "party-uml",
-    "pastElectionHistory": "Business leader",
+    "pastExperience": "Business leader",
     "agendas": [
       "Digital connectivity",
       "Anti-corruption measures",
@@ -1946,7 +1946,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/maya_chhetri.jpg",
     "partyId": "party-rpp",
-    "pastElectionHistory": "Social worker",
+    "pastExperience": "Social worker",
     "agendas": [
       "Job creation",
       "Electricity expansion",
@@ -1969,7 +1969,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sita_karki.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Business leader",
+    "pastExperience": "Business leader",
     "agendas": [
       "Local industry support",
       "Women empowerment",
@@ -1992,7 +1992,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sabita_maharjan.jpg",
     "partyId": "party-uml",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Local industry support",
       "Forest conservation",
@@ -2015,7 +2015,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sunita_adhikari.jpg",
     "partyId": "party-rsp",
-    "pastElectionHistory": "Social worker",
+    "pastExperience": "Social worker",
     "agendas": [
       "Clean water access",
       "Healthcare improvement",
@@ -2038,7 +2038,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/maya_pandey.jpg",
     "partyId": "party-rpp",
-    "pastElectionHistory": "First time candidate",
+    "pastExperience": "First time candidate",
     "agendas": [
       "Road construction",
       "Electricity expansion",
@@ -2061,7 +2061,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/bikram_shrestha.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Local activist",
+    "pastExperience": "Local activist",
     "agendas": [
       "Infrastructure development",
       "Healthcare improvement",
@@ -2084,7 +2084,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sujata_karki.jpg",
     "partyId": "party-uml",
-    "pastElectionHistory": "Social worker",
+    "pastExperience": "Social worker",
     "agendas": [
       "Flood control",
       "Agricultural support",
@@ -2107,7 +2107,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/prakash_yadav.jpg",
     "partyId": "party-nc",
-    "pastElectionHistory": "Social worker",
+    "pastExperience": "Social worker",
     "agendas": [
       "Flood control",
       "Healthcare improvement",
@@ -2130,7 +2130,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sujata_pandey.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Business leader",
+    "pastExperience": "Business leader",
     "agendas": [
       "Tourism promotion",
       "Agricultural support",
@@ -2153,7 +2153,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/suman_bhatt.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Former Minister",
+    "pastExperience": "Former Minister",
     "agendas": [
       "Flood control",
       "Agricultural support",
@@ -2176,7 +2176,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/raj_karki.jpg",
     "partyId": "party-rpp",
-    "pastElectionHistory": "Social worker",
+    "pastExperience": "Social worker",
     "agendas": [
       "Tourism promotion",
       "Youth development",
@@ -2199,7 +2199,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/manjita_bhatt.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Clean water access",
       "Education reform",
@@ -2222,7 +2222,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sujata_bhatt.jpg",
     "partyId": "party-rsp",
-    "pastElectionHistory": "Business leader",
+    "pastExperience": "Business leader",
     "agendas": [
       "Clean water access",
       "Local industry support",
@@ -2245,7 +2245,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/narayan_subedi.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Former Minister",
+    "pastExperience": "Former Minister",
     "agendas": [
       "Electricity expansion",
       "Women empowerment",
@@ -2268,7 +2268,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/priya_yadav.jpg",
     "partyId": "party-rsp",
-    "pastElectionHistory": "Local activist",
+    "pastExperience": "Local activist",
     "agendas": [
       "Flood control",
       "Youth development",
@@ -2291,7 +2291,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sita_gurung.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Former Minister",
+    "pastExperience": "Former Minister",
     "agendas": [
       "Education reform",
       "Local industry support",
@@ -2314,7 +2314,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/ram_chhetri.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Local activist",
+    "pastExperience": "Local activist",
     "agendas": [
       "Clean water access",
       "Agricultural support",
@@ -2337,7 +2337,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/narayan_subedi.jpg",
     "partyId": "party-rpp",
-    "pastElectionHistory": "Local activist",
+    "pastExperience": "Local activist",
     "agendas": [
       "Road construction",
       "Electricity expansion",
@@ -2360,7 +2360,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sabita_pandey.jpg",
     "partyId": "party-nc",
-    "pastElectionHistory": "Local activist",
+    "pastExperience": "Local activist",
     "agendas": [
       "Youth development",
       "Forest conservation",
@@ -2383,7 +2383,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/asha_shrestha.jpg",
     "partyId": "party-uml",
-    "pastElectionHistory": "First time candidate",
+    "pastExperience": "First time candidate",
     "agendas": [
       "Agricultural support",
       "Anti-corruption measures",
@@ -2406,7 +2406,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/priya_pokharel.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Business leader",
+    "pastExperience": "Business leader",
     "agendas": [
       "Local industry support",
       "Road construction",
@@ -2429,7 +2429,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/suraj_pandey.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Infrastructure development",
       "Agricultural support",
@@ -2452,7 +2452,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/suman_pokharel.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Business leader",
+    "pastExperience": "Business leader",
     "agendas": [
       "Electricity expansion",
       "Women empowerment",
@@ -2475,7 +2475,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/suman_adhikari.jpg",
     "partyId": "party-uml",
-    "pastElectionHistory": "First time candidate",
+    "pastExperience": "First time candidate",
     "agendas": [
       "Digital connectivity",
       "Local industry support",
@@ -2498,7 +2498,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/kunti_pokharel.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Business leader",
+    "pastExperience": "Business leader",
     "agendas": [
       "Youth development",
       "Job creation",
@@ -2521,7 +2521,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/gita_subedi.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Social worker",
+    "pastExperience": "Social worker",
     "agendas": [
       "Agricultural support",
       "Youth development",
@@ -2544,7 +2544,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sunita_rai.jpg",
     "partyId": "party-uml",
-    "pastElectionHistory": "Local activist",
+    "pastExperience": "Local activist",
     "agendas": [
       "Education reform",
       "Road construction",
@@ -2567,7 +2567,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/raj_pokharel.jpg",
     "partyId": "party-nc",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Clean water access",
       "Electricity expansion",
@@ -2590,7 +2590,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sunita_bhatt.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Social worker",
+    "pastExperience": "Social worker",
     "agendas": [
       "Healthcare improvement",
       "Infrastructure development",
@@ -2613,7 +2613,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/anita_gurung.jpg",
     "partyId": "party-nc",
-    "pastElectionHistory": "First time candidate",
+    "pastExperience": "First time candidate",
     "agendas": [
       "Anti-corruption measures",
       "Healthcare improvement",
@@ -2636,7 +2636,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sunita_gurung.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Social worker",
+    "pastExperience": "Social worker",
     "agendas": [
       "Infrastructure development",
       "Anti-corruption measures",
@@ -2659,7 +2659,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/kunti_thapa.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Road construction",
       "Tourism promotion",
@@ -2682,7 +2682,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/suraj_karki.jpg",
     "partyId": "party-nc",
-    "pastElectionHistory": "Former Minister",
+    "pastExperience": "Former Minister",
     "agendas": [
       "Women empowerment",
       "Agricultural support",
@@ -2705,7 +2705,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/kamal_shrestha.jpg",
     "partyId": "party-nc",
-    "pastElectionHistory": "Former Minister",
+    "pastExperience": "Former Minister",
     "agendas": [
       "Road construction",
       "Women empowerment",
@@ -2728,7 +2728,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/manjita_gurung.jpg",
     "partyId": "party-uml",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Tourism promotion",
       "Forest conservation",
@@ -2751,7 +2751,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/gita_yadav.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Business leader",
+    "pastExperience": "Business leader",
     "agendas": [
       "Youth development",
       "Clean water access",
@@ -2774,7 +2774,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/ramesh_thapa.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Longtime party worker",
+    "pastExperience": "Longtime party worker",
     "agendas": [
       "Anti-corruption measures",
       "Flood control",
@@ -2797,7 +2797,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/bishal_rai.jpg",
     "partyId": "party-uml",
-    "pastElectionHistory": "Local activist",
+    "pastExperience": "Local activist",
     "agendas": [
       "Youth development",
       "Healthcare improvement",
@@ -2820,7 +2820,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/bikram_bhatt.jpg",
     "partyId": "party-rsp",
-    "pastElectionHistory": "Social worker",
+    "pastExperience": "Social worker",
     "agendas": [
       "Local industry support",
       "Agricultural support",
@@ -2843,7 +2843,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/maya_maharjan.jpg",
     "partyId": "party-nc",
-    "pastElectionHistory": "Business leader",
+    "pastExperience": "Business leader",
     "agendas": [
       "Road construction",
       "Women empowerment",
@@ -2866,7 +2866,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/ram_pokharel.jpg",
     "partyId": "party-rpp",
-    "pastElectionHistory": "Social worker",
+    "pastExperience": "Social worker",
     "agendas": [
       "Clean water access",
       "Local industry support",
@@ -2889,7 +2889,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/kamal_yadav.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "First time candidate",
+    "pastExperience": "First time candidate",
     "agendas": [
       "Healthcare improvement",
       "Anti-corruption measures",
@@ -2912,7 +2912,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/hari_gurung.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "First time candidate",
+    "pastExperience": "First time candidate",
     "agendas": [
       "Flood control",
       "Forest conservation",
@@ -2935,7 +2935,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/gita_yadav.jpg",
     "partyId": "party-rsp",
-    "pastElectionHistory": "Former Minister",
+    "pastExperience": "Former Minister",
     "agendas": [
       "Anti-corruption measures",
       "Agricultural support",
@@ -2958,7 +2958,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sunita_subedi.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Former Minister",
+    "pastExperience": "Former Minister",
     "agendas": [
       "Infrastructure development",
       "Electricity expansion",
@@ -2981,7 +2981,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/suman_karki.jpg",
     "partyId": "party-rpp",
-    "pastElectionHistory": "Local activist",
+    "pastExperience": "Local activist",
     "agendas": [
       "Local industry support",
       "Healthcare improvement",
@@ -3004,7 +3004,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/kamal_rai.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Longtime party worker",
+    "pastExperience": "Longtime party worker",
     "agendas": [
       "Local industry support",
       "Anti-corruption measures",
@@ -3027,7 +3027,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/maya_chhetri.jpg",
     "partyId": "party-rpp",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Education reform",
       "Forest conservation",
@@ -3050,7 +3050,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/asha_bhatt.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Agricultural support",
       "Clean water access",
@@ -3073,7 +3073,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/maya_gurung.jpg",
     "partyId": "party-rpp",
-    "pastElectionHistory": "Local activist",
+    "pastExperience": "Local activist",
     "agendas": [
       "Digital connectivity",
       "Agricultural support",
@@ -3096,7 +3096,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/priya_pokharel.jpg",
     "partyId": "party-rpp",
-    "pastElectionHistory": "First time candidate",
+    "pastExperience": "First time candidate",
     "agendas": [
       "Youth development",
       "Agricultural support",
@@ -3119,7 +3119,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/asha_karki.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Former Minister",
+    "pastExperience": "Former Minister",
     "agendas": [
       "Road construction",
       "Job creation",
@@ -3142,7 +3142,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/anita_maharjan.jpg",
     "partyId": "party-rpp",
-    "pastElectionHistory": "First time candidate",
+    "pastExperience": "First time candidate",
     "agendas": [
       "Anti-corruption measures",
       "Road construction",
@@ -3165,7 +3165,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/asha_thapa.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Social worker",
+    "pastExperience": "Social worker",
     "agendas": [
       "Digital connectivity",
       "Clean water access",
@@ -3188,7 +3188,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/maya_adhikari.jpg",
     "partyId": "party-rpp",
-    "pastElectionHistory": "Former Minister",
+    "pastExperience": "Former Minister",
     "agendas": [
       "Agricultural support",
       "Electricity expansion",
@@ -3211,7 +3211,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/maya_yadav.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Business leader",
+    "pastExperience": "Business leader",
     "agendas": [
       "Healthcare improvement",
       "Road construction",
@@ -3234,7 +3234,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sujata_chhetri.jpg",
     "partyId": "party-rsp",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Women empowerment",
       "Youth development",
@@ -3257,7 +3257,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/ramesh_yadav.jpg",
     "partyId": "party-rpp",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Infrastructure development",
       "Job creation",
@@ -3280,7 +3280,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/manjita_shrestha.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Infrastructure development",
       "Clean water access",
@@ -3303,7 +3303,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/priya_chhetri.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Local activist",
+    "pastExperience": "Local activist",
     "agendas": [
       "Infrastructure development",
       "Tourism promotion",
@@ -3326,7 +3326,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/anita_karki.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Business leader",
+    "pastExperience": "Business leader",
     "agendas": [
       "Education reform",
       "Road construction",
@@ -3349,7 +3349,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sabita_yadav.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Clean water access",
       "Healthcare improvement",
@@ -3372,7 +3372,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/dipak_pokharel.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Local activist",
+    "pastExperience": "Local activist",
     "agendas": [
       "Infrastructure development",
       "Flood control",
@@ -3395,7 +3395,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/ram_rai.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Longtime party worker",
+    "pastExperience": "Longtime party worker",
     "agendas": [
       "Flood control",
       "Education reform",
@@ -3418,7 +3418,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/prakash_bhatt.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Local activist",
+    "pastExperience": "Local activist",
     "agendas": [
       "Anti-corruption measures",
       "Infrastructure development",
@@ -3441,7 +3441,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/krishna_subedi.jpg",
     "partyId": "party-nc",
-    "pastElectionHistory": "Social worker",
+    "pastExperience": "Social worker",
     "agendas": [
       "Forest conservation",
       "Clean water access",
@@ -3464,7 +3464,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/anita_subedi.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Local activist",
+    "pastExperience": "Local activist",
     "agendas": [
       "Local industry support",
       "Women empowerment",
@@ -3487,7 +3487,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/gita_pandey.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "First time candidate",
+    "pastExperience": "First time candidate",
     "agendas": [
       "Flood control",
       "Anti-corruption measures",
@@ -3510,7 +3510,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sita_pokharel.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Former Minister",
+    "pastExperience": "Former Minister",
     "agendas": [
       "Agricultural support",
       "Infrastructure development",
@@ -3533,7 +3533,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/hari_chhetri.jpg",
     "partyId": "party-rpp",
-    "pastElectionHistory": "Longtime party worker",
+    "pastExperience": "Longtime party worker",
     "agendas": [
       "Clean water access",
       "Digital connectivity",
@@ -3556,7 +3556,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/manjita_shrestha.jpg",
     "partyId": "party-rpp",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Forest conservation",
       "Healthcare improvement",
@@ -3579,7 +3579,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/maya_shrestha.jpg",
     "partyId": "party-nc",
-    "pastElectionHistory": "Longtime party worker",
+    "pastExperience": "Longtime party worker",
     "agendas": [
       "Education reform",
       "Healthcare improvement",
@@ -3602,7 +3602,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/ramesh_rai.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Former Minister",
+    "pastExperience": "Former Minister",
     "agendas": [
       "Youth development",
       "Agricultural support",
@@ -3625,7 +3625,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/gita_pokharel.jpg",
     "partyId": "party-nc",
-    "pastElectionHistory": "First time candidate",
+    "pastExperience": "First time candidate",
     "agendas": [
       "Clean water access",
       "Road construction",
@@ -3648,7 +3648,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/maya_gurung.jpg",
     "partyId": "party-uml",
-    "pastElectionHistory": "Former Minister",
+    "pastExperience": "Former Minister",
     "agendas": [
       "Tourism promotion",
       "Education reform",
@@ -3671,7 +3671,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/suman_shrestha.jpg",
     "partyId": "party-rsp",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Healthcare improvement",
       "Forest conservation",
@@ -3694,7 +3694,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/ram_pokharel.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Business leader",
+    "pastExperience": "Business leader",
     "agendas": [
       "Tourism promotion",
       "Healthcare improvement",
@@ -3717,7 +3717,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/ramesh_pokharel.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Flood control",
       "Education reform",
@@ -3740,7 +3740,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/prakash_bhatt.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "First time candidate",
+    "pastExperience": "First time candidate",
     "agendas": [
       "Forest conservation",
       "Flood control",
@@ -3763,7 +3763,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/asha_gurung.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Business leader",
+    "pastExperience": "Business leader",
     "agendas": [
       "Infrastructure development",
       "Clean water access",
@@ -3786,7 +3786,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/raj_pandey.jpg",
     "partyId": "party-uml",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Education reform",
       "Infrastructure development",
@@ -3809,7 +3809,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/suraj_bhatt.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Business leader",
+    "pastExperience": "Business leader",
     "agendas": [
       "Electricity expansion",
       "Road construction",
@@ -3832,7 +3832,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/prakash_rai.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Local activist",
+    "pastExperience": "Local activist",
     "agendas": [
       "Digital connectivity",
       "Forest conservation",
@@ -3855,7 +3855,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/kunti_bhatt.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Former Minister",
+    "pastExperience": "Former Minister",
     "agendas": [
       "Clean water access",
       "Infrastructure development",
@@ -3878,7 +3878,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sujata_shrestha.jpg",
     "partyId": "party-rsp",
-    "pastElectionHistory": "Former Minister",
+    "pastExperience": "Former Minister",
     "agendas": [
       "Digital connectivity",
       "Electricity expansion",
@@ -3901,7 +3901,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sujata_yadav.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Former Minister",
+    "pastExperience": "Former Minister",
     "agendas": [
       "Electricity expansion",
       "Agricultural support",
@@ -3924,7 +3924,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/bishal_subedi.jpg",
     "partyId": "party-uml",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Healthcare improvement",
       "Infrastructure development",
@@ -3947,7 +3947,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/anita_adhikari.jpg",
     "partyId": "party-rsp",
-    "pastElectionHistory": "Business leader",
+    "pastExperience": "Business leader",
     "agendas": [
       "Tourism promotion",
       "Agricultural support",
@@ -3970,7 +3970,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sita_shrestha.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Business leader",
+    "pastExperience": "Business leader",
     "agendas": [
       "Road construction",
       "Infrastructure development",
@@ -3993,7 +3993,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/kunti_pandey.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Business leader",
+    "pastExperience": "Business leader",
     "agendas": [
       "Local industry support",
       "Healthcare improvement",
@@ -4016,7 +4016,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/kunti_subedi.jpg",
     "partyId": "party-nc",
-    "pastElectionHistory": "Former Minister",
+    "pastExperience": "Former Minister",
     "agendas": [
       "Job creation",
       "Local industry support",
@@ -4039,7 +4039,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sunita_gurung.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Former Minister",
+    "pastExperience": "Former Minister",
     "agendas": [
       "Flood control",
       "Women empowerment",
@@ -4062,7 +4062,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/anita_shrestha.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Local activist",
+    "pastExperience": "Local activist",
     "agendas": [
       "Anti-corruption measures",
       "Education reform",
@@ -4085,7 +4085,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/gita_yadav.jpg",
     "partyId": "party-uml",
-    "pastElectionHistory": "Social worker",
+    "pastExperience": "Social worker",
     "agendas": [
       "Infrastructure development",
       "Healthcare improvement",
@@ -4108,7 +4108,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/prakash_pokharel.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "First time candidate",
+    "pastExperience": "First time candidate",
     "agendas": [
       "Digital connectivity",
       "Electricity expansion",
@@ -4131,7 +4131,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/kunti_rai.jpg",
     "partyId": "party-uml",
-    "pastElectionHistory": "Business leader",
+    "pastExperience": "Business leader",
     "agendas": [
       "Women empowerment",
       "Education reform",
@@ -4154,7 +4154,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/manjita_maharjan.jpg",
     "partyId": "party-rpp",
-    "pastElectionHistory": "Local activist",
+    "pastExperience": "Local activist",
     "agendas": [
       "Clean water access",
       "Infrastructure development",
@@ -4177,7 +4177,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/maya_thapa.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Former Minister",
+    "pastExperience": "Former Minister",
     "agendas": [
       "Clean water access",
       "Anti-corruption measures",
@@ -4200,7 +4200,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/krishna_pokharel.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Tourism promotion",
       "Youth development",
@@ -4223,7 +4223,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sabita_shrestha.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Business leader",
+    "pastExperience": "Business leader",
     "agendas": [
       "Healthcare improvement",
       "Infrastructure development",
@@ -4246,7 +4246,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/raj_thapa.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Local activist",
+    "pastExperience": "Local activist",
     "agendas": [
       "Youth development",
       "Tourism promotion",
@@ -4269,7 +4269,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/suman_rai.jpg",
     "partyId": "party-uml",
-    "pastElectionHistory": "Former Minister",
+    "pastExperience": "Former Minister",
     "agendas": [
       "Tourism promotion",
       "Anti-corruption measures",
@@ -4292,7 +4292,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/ramesh_karki.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Flood control",
       "Local industry support",
@@ -4315,7 +4315,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/asha_yadav.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Longtime party worker",
+    "pastExperience": "Longtime party worker",
     "agendas": [
       "Healthcare improvement",
       "Clean water access",
@@ -4338,7 +4338,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/ram_shrestha.jpg",
     "partyId": "party-uml",
-    "pastElectionHistory": "Business leader",
+    "pastExperience": "Business leader",
     "agendas": [
       "Youth development",
       "Healthcare improvement",
@@ -4361,7 +4361,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/ramesh_thapa.jpg",
     "partyId": "party-uml",
-    "pastElectionHistory": "Local activist",
+    "pastExperience": "Local activist",
     "agendas": [
       "Job creation",
       "Forest conservation",
@@ -4384,7 +4384,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/priya_adhikari.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Electricity expansion",
       "Clean water access",
@@ -4407,7 +4407,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/suman_pandey.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Former Minister",
+    "pastExperience": "Former Minister",
     "agendas": [
       "Tourism promotion",
       "Forest conservation",
@@ -4430,7 +4430,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/manjita_adhikari.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Local activist",
+    "pastExperience": "Local activist",
     "agendas": [
       "Anti-corruption measures",
       "Electricity expansion",
@@ -4453,7 +4453,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/gita_thapa.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Business leader",
+    "pastExperience": "Business leader",
     "agendas": [
       "Women empowerment",
       "Flood control",
@@ -4476,7 +4476,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/anita_chhetri.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Youth development",
       "Agricultural support",
@@ -4499,7 +4499,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/ramesh_pandey.jpg",
     "partyId": "party-rsp",
-    "pastElectionHistory": "Social worker",
+    "pastExperience": "Social worker",
     "agendas": [
       "Agricultural support",
       "Tourism promotion",
@@ -4522,7 +4522,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/prakash_maharjan.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Business leader",
+    "pastExperience": "Business leader",
     "agendas": [
       "Forest conservation",
       "Education reform",
@@ -4545,7 +4545,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/priya_adhikari.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Local activist",
+    "pastExperience": "Local activist",
     "agendas": [
       "Electricity expansion",
       "Job creation",
@@ -4568,7 +4568,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/raj_subedi.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Anti-corruption measures",
       "Agricultural support",
@@ -4591,7 +4591,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sunita_subedi.jpg",
     "partyId": "party-rsp",
-    "pastElectionHistory": "Social worker",
+    "pastExperience": "Social worker",
     "agendas": [
       "Tourism promotion",
       "Flood control",
@@ -4614,7 +4614,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/anita_yadav.jpg",
     "partyId": "party-rsp",
-    "pastElectionHistory": "Local activist",
+    "pastExperience": "Local activist",
     "agendas": [
       "Job creation",
       "Forest conservation",
@@ -4637,7 +4637,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/bishal_bhatt.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Longtime party worker",
+    "pastExperience": "Longtime party worker",
     "agendas": [
       "Infrastructure development",
       "Education reform",
@@ -4660,7 +4660,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/anita_bhatt.jpg",
     "partyId": "party-rsp",
-    "pastElectionHistory": "Local activist",
+    "pastExperience": "Local activist",
     "agendas": [
       "Electricity expansion",
       "Flood control",
@@ -4683,7 +4683,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/suman_subedi.jpg",
     "partyId": "party-uml",
-    "pastElectionHistory": "Social worker",
+    "pastExperience": "Social worker",
     "agendas": [
       "Tourism promotion",
       "Road construction",
@@ -4706,7 +4706,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/maya_chhetri.jpg",
     "partyId": "party-rpp",
-    "pastElectionHistory": "Longtime party worker",
+    "pastExperience": "Longtime party worker",
     "agendas": [
       "Clean water access",
       "Youth development",
@@ -4729,7 +4729,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/narayan_chhetri.jpg",
     "partyId": "party-rpp",
-    "pastElectionHistory": "Business leader",
+    "pastExperience": "Business leader",
     "agendas": [
       "Forest conservation",
       "Anti-corruption measures",
@@ -4752,7 +4752,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/narayan_subedi.jpg",
     "partyId": "party-rsp",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Road construction",
       "Electricity expansion",
@@ -4775,7 +4775,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/bikram_pokharel.jpg",
     "partyId": "party-rsp",
-    "pastElectionHistory": "Local activist",
+    "pastExperience": "Local activist",
     "agendas": [
       "Local industry support",
       "Road construction",
@@ -4798,7 +4798,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/krishna_pandey.jpg",
     "partyId": "party-nc",
-    "pastElectionHistory": "Local activist",
+    "pastExperience": "Local activist",
     "agendas": [
       "Women empowerment",
       "Agricultural support",
@@ -4821,7 +4821,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/prakash_bhatt.jpg",
     "partyId": "party-uml",
-    "pastElectionHistory": "Social worker",
+    "pastExperience": "Social worker",
     "agendas": [
       "Electricity expansion",
       "Tourism promotion",
@@ -4844,7 +4844,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/priya_rai.jpg",
     "partyId": "party-rsp",
-    "pastElectionHistory": "Business leader",
+    "pastExperience": "Business leader",
     "agendas": [
       "Healthcare improvement",
       "Anti-corruption measures",
@@ -4867,7 +4867,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/maya_shrestha.jpg",
     "partyId": "party-nc",
-    "pastElectionHistory": "Social worker",
+    "pastExperience": "Social worker",
     "agendas": [
       "Electricity expansion",
       "Infrastructure development",
@@ -4890,7 +4890,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/bikram_yadav.jpg",
     "partyId": "party-uml",
-    "pastElectionHistory": "First time candidate",
+    "pastExperience": "First time candidate",
     "agendas": [
       "Digital connectivity",
       "Tourism promotion",
@@ -4913,7 +4913,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/anita_bhatt.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Longtime party worker",
+    "pastExperience": "Longtime party worker",
     "agendas": [
       "Forest conservation",
       "Local industry support",
@@ -4936,7 +4936,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/dipak_gurung.jpg",
     "partyId": "party-rsp",
-    "pastElectionHistory": "Former Minister",
+    "pastExperience": "Former Minister",
     "agendas": [
       "Flood control",
       "Electricity expansion",
@@ -4959,7 +4959,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/raj_yadav.jpg",
     "partyId": "party-rpp",
-    "pastElectionHistory": "Social worker",
+    "pastExperience": "Social worker",
     "agendas": [
       "Forest conservation",
       "Local industry support",
@@ -4982,7 +4982,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/ramesh_bhatt.jpg",
     "partyId": "party-nc",
-    "pastElectionHistory": "Social worker",
+    "pastExperience": "Social worker",
     "agendas": [
       "Job creation",
       "Women empowerment",
@@ -5005,7 +5005,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/asha_thapa.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Social worker",
+    "pastExperience": "Social worker",
     "agendas": [
       "Healthcare improvement",
       "Infrastructure development",
@@ -5028,7 +5028,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/asha_pokharel.jpg",
     "partyId": "party-nc",
-    "pastElectionHistory": "Business leader",
+    "pastExperience": "Business leader",
     "agendas": [
       "Local industry support",
       "Agricultural support",
@@ -5051,7 +5051,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sunita_thapa.jpg",
     "partyId": "party-nc",
-    "pastElectionHistory": "Business leader",
+    "pastExperience": "Business leader",
     "agendas": [
       "Local industry support",
       "Women empowerment",
@@ -5074,7 +5074,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sunita_pandey.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "First time candidate",
+    "pastExperience": "First time candidate",
     "agendas": [
       "Healthcare improvement",
       "Infrastructure development",
@@ -5097,7 +5097,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sunita_shrestha.jpg",
     "partyId": "party-rpp",
-    "pastElectionHistory": "Local activist",
+    "pastExperience": "Local activist",
     "agendas": [
       "Clean water access",
       "Youth development",
@@ -5120,7 +5120,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/ram_karki.jpg",
     "partyId": "party-uml",
-    "pastElectionHistory": "First time candidate",
+    "pastExperience": "First time candidate",
     "agendas": [
       "Digital connectivity",
       "Healthcare improvement",
@@ -5143,7 +5143,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sujata_bhatt.jpg",
     "partyId": "party-nc",
-    "pastElectionHistory": "Business leader",
+    "pastExperience": "Business leader",
     "agendas": [
       "Flood control",
       "Healthcare improvement",
@@ -5166,7 +5166,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/dipak_subedi.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Longtime party worker",
+    "pastExperience": "Longtime party worker",
     "agendas": [
       "Clean water access",
       "Road construction",
@@ -5189,7 +5189,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/suman_thapa.jpg",
     "partyId": "party-nc",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Road construction",
       "Local industry support",
@@ -5212,7 +5212,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/asha_yadav.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Job creation",
       "Women empowerment",
@@ -5235,7 +5235,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/kamal_shrestha.jpg",
     "partyId": "party-rpp",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Electricity expansion",
       "Women empowerment",
@@ -5258,7 +5258,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sujata_maharjan.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Clean water access",
       "Flood control",
@@ -5281,7 +5281,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/krishna_gurung.jpg",
     "partyId": "party-rsp",
-    "pastElectionHistory": "First time candidate",
+    "pastExperience": "First time candidate",
     "agendas": [
       "Youth development",
       "Road construction",
@@ -5304,7 +5304,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/suraj_pokharel.jpg",
     "partyId": "party-rpp",
-    "pastElectionHistory": "Local activist",
+    "pastExperience": "Local activist",
     "agendas": [
       "Job creation",
       "Agricultural support",
@@ -5327,7 +5327,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/suman_maharjan.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Former Minister",
+    "pastExperience": "Former Minister",
     "agendas": [
       "Education reform",
       "Agricultural support",
@@ -5350,7 +5350,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/anita_shrestha.jpg",
     "partyId": "party-uml",
-    "pastElectionHistory": "Former Minister",
+    "pastExperience": "Former Minister",
     "agendas": [
       "Local industry support",
       "Infrastructure development",
@@ -5373,7 +5373,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sita_rai.jpg",
     "partyId": "party-rpp",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Tourism promotion",
       "Clean water access",
@@ -5396,7 +5396,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/bikram_karki.jpg",
     "partyId": "party-nc",
-    "pastElectionHistory": "Longtime party worker",
+    "pastExperience": "Longtime party worker",
     "agendas": [
       "Education reform",
       "Job creation",
@@ -5419,7 +5419,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/prakash_adhikari.jpg",
     "partyId": "party-uml",
-    "pastElectionHistory": "Longtime party worker",
+    "pastExperience": "Longtime party worker",
     "agendas": [
       "Women empowerment",
       "Job creation",
@@ -5442,7 +5442,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/krishna_shrestha.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Former Minister",
+    "pastExperience": "Former Minister",
     "agendas": [
       "Anti-corruption measures",
       "Road construction",
@@ -5465,7 +5465,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/ramesh_karki.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Longtime party worker",
+    "pastExperience": "Longtime party worker",
     "agendas": [
       "Women empowerment",
       "Tourism promotion",
@@ -5488,7 +5488,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/raj_rai.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "First time candidate",
+    "pastExperience": "First time candidate",
     "agendas": [
       "Infrastructure development",
       "Local industry support",
@@ -5511,7 +5511,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sita_maharjan.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Local activist",
+    "pastExperience": "Local activist",
     "agendas": [
       "Electricity expansion",
       "Forest conservation",
@@ -5534,7 +5534,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/raj_subedi.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Social worker",
+    "pastExperience": "Social worker",
     "agendas": [
       "Agricultural support",
       "Tourism promotion",
@@ -5557,7 +5557,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/manjita_shrestha.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Infrastructure development",
       "Women empowerment",
@@ -5580,7 +5580,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/bikram_chhetri.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Local activist",
+    "pastExperience": "Local activist",
     "agendas": [
       "Clean water access",
       "Flood control",
@@ -5603,7 +5603,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/kunti_gurung.jpg",
     "partyId": "party-nc",
-    "pastElectionHistory": "Local activist",
+    "pastExperience": "Local activist",
     "agendas": [
       "Anti-corruption measures",
       "Healthcare improvement",
@@ -5626,7 +5626,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/ramesh_thapa.jpg",
     "partyId": "party-rpp",
-    "pastElectionHistory": "Longtime party worker",
+    "pastExperience": "Longtime party worker",
     "agendas": [
       "Job creation",
       "Healthcare improvement",
@@ -5649,7 +5649,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/bikram_pokharel.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "First time candidate",
+    "pastExperience": "First time candidate",
     "agendas": [
       "Flood control",
       "Women empowerment",
@@ -5672,7 +5672,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/krishna_chhetri.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Longtime party worker",
+    "pastExperience": "Longtime party worker",
     "agendas": [
       "Anti-corruption measures",
       "Forest conservation",
@@ -5695,7 +5695,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/raj_adhikari.jpg",
     "partyId": "party-uml",
-    "pastElectionHistory": "Longtime party worker",
+    "pastExperience": "Longtime party worker",
     "agendas": [
       "Healthcare improvement",
       "Agricultural support",
@@ -5718,7 +5718,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sunita_thapa.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Local activist",
+    "pastExperience": "Local activist",
     "agendas": [
       "Digital connectivity",
       "Local industry support",
@@ -5741,7 +5741,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/gita_adhikari.jpg",
     "partyId": "party-nc",
-    "pastElectionHistory": "Former Minister",
+    "pastExperience": "Former Minister",
     "agendas": [
       "Digital connectivity",
       "Healthcare improvement",
@@ -5764,7 +5764,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/priya_yadav.jpg",
     "partyId": "party-rsp",
-    "pastElectionHistory": "First time candidate",
+    "pastExperience": "First time candidate",
     "agendas": [
       "Local industry support",
       "Forest conservation",
@@ -5787,7 +5787,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/kunti_bhatt.jpg",
     "partyId": "party-nc",
-    "pastElectionHistory": "Local activist",
+    "pastExperience": "Local activist",
     "agendas": [
       "Anti-corruption measures",
       "Women empowerment",
@@ -5810,7 +5810,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sujata_gurung.jpg",
     "partyId": "party-uml",
-    "pastElectionHistory": "First time candidate",
+    "pastExperience": "First time candidate",
     "agendas": [
       "Clean water access",
       "Agricultural support",
@@ -5833,7 +5833,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/krishna_subedi.jpg",
     "partyId": "party-nc",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Healthcare improvement",
       "Forest conservation",
@@ -5856,7 +5856,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/asha_bhatt.jpg",
     "partyId": "party-rsp",
-    "pastElectionHistory": "Local activist",
+    "pastExperience": "Local activist",
     "agendas": [
       "Digital connectivity",
       "Job creation",
@@ -5879,7 +5879,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sujata_shrestha.jpg",
     "partyId": "party-rsp",
-    "pastElectionHistory": "First time candidate",
+    "pastExperience": "First time candidate",
     "agendas": [
       "Local industry support",
       "Digital connectivity",
@@ -5902,7 +5902,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/hari_maharjan.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Clean water access",
       "Digital connectivity",
@@ -5925,7 +5925,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sabita_gurung.jpg",
     "partyId": "party-rsp",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Forest conservation",
       "Digital connectivity",
@@ -5948,7 +5948,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/prakash_shrestha.jpg",
     "partyId": "party-rsp",
-    "pastElectionHistory": "First time candidate",
+    "pastExperience": "First time candidate",
     "agendas": [
       "Healthcare improvement",
       "Infrastructure development",
@@ -5971,7 +5971,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/prakash_gurung.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Social worker",
+    "pastExperience": "Social worker",
     "agendas": [
       "Electricity expansion",
       "Agricultural support",
@@ -5994,7 +5994,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/bishal_karki.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Longtime party worker",
+    "pastExperience": "Longtime party worker",
     "agendas": [
       "Agricultural support",
       "Clean water access",
@@ -6017,7 +6017,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/kamal_pandey.jpg",
     "partyId": "party-nc",
-    "pastElectionHistory": "First time candidate",
+    "pastExperience": "First time candidate",
     "agendas": [
       "Healthcare improvement",
       "Electricity expansion",
@@ -6040,7 +6040,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/bikram_bhatt.jpg",
     "partyId": "party-rsp",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Job creation",
       "Forest conservation",
@@ -6063,7 +6063,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/anita_gurung.jpg",
     "partyId": "party-rpp",
-    "pastElectionHistory": "Former Minister",
+    "pastExperience": "Former Minister",
     "agendas": [
       "Local industry support",
       "Anti-corruption measures",
@@ -6086,7 +6086,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/maya_gurung.jpg",
     "partyId": "party-uml",
-    "pastElectionHistory": "Longtime party worker",
+    "pastExperience": "Longtime party worker",
     "agendas": [
       "Education reform",
       "Tourism promotion",
@@ -6109,7 +6109,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sujata_subedi.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Healthcare improvement",
       "Electricity expansion",
@@ -6132,7 +6132,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/priya_pandey.jpg",
     "partyId": "party-nc",
-    "pastElectionHistory": "First time candidate",
+    "pastExperience": "First time candidate",
     "agendas": [
       "Forest conservation",
       "Clean water access",
@@ -6155,7 +6155,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/bishal_subedi.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Healthcare improvement",
       "Education reform",
@@ -6178,7 +6178,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/prakash_adhikari.jpg",
     "partyId": "party-nc",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Healthcare improvement",
       "Road construction",
@@ -6201,7 +6201,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/bikram_bhatt.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Social worker",
+    "pastExperience": "Social worker",
     "agendas": [
       "Anti-corruption measures",
       "Clean water access",
@@ -6224,7 +6224,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/suman_gurung.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "First time candidate",
+    "pastExperience": "First time candidate",
     "agendas": [
       "Healthcare improvement",
       "Infrastructure development",
@@ -6247,7 +6247,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/suraj_adhikari.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Longtime party worker",
+    "pastExperience": "Longtime party worker",
     "agendas": [
       "Youth development",
       "Healthcare improvement",
@@ -6270,7 +6270,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/narayan_gurung.jpg",
     "partyId": "party-rpp",
-    "pastElectionHistory": "Business leader",
+    "pastExperience": "Business leader",
     "agendas": [
       "Youth development",
       "Flood control",
@@ -6293,7 +6293,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/kunti_adhikari.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Electricity expansion",
       "Forest conservation",
@@ -6316,7 +6316,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/kamal_gurung.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Youth development",
       "Women empowerment",
@@ -6339,7 +6339,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sujata_chhetri.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Former Minister",
+    "pastExperience": "Former Minister",
     "agendas": [
       "Job creation",
       "Education reform",
@@ -6362,7 +6362,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/gita_rai.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "First time candidate",
+    "pastExperience": "First time candidate",
     "agendas": [
       "Job creation",
       "Forest conservation",
@@ -6385,7 +6385,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/ram_shrestha.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Local activist",
+    "pastExperience": "Local activist",
     "agendas": [
       "Electricity expansion",
       "Local industry support",
@@ -6408,7 +6408,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/suman_gurung.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "First time candidate",
+    "pastExperience": "First time candidate",
     "agendas": [
       "Education reform",
       "Flood control",
@@ -6431,7 +6431,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/asha_shrestha.jpg",
     "partyId": "party-rsp",
-    "pastElectionHistory": "Local activist",
+    "pastExperience": "Local activist",
     "agendas": [
       "Electricity expansion",
       "Forest conservation",
@@ -6454,7 +6454,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/bishal_bhatt.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Business leader",
+    "pastExperience": "Business leader",
     "agendas": [
       "Tourism promotion",
       "Women empowerment",
@@ -6477,7 +6477,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/ram_pandey.jpg",
     "partyId": "party-nc",
-    "pastElectionHistory": "Longtime party worker",
+    "pastExperience": "Longtime party worker",
     "agendas": [
       "Local industry support",
       "Agricultural support",
@@ -6500,7 +6500,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/narayan_pandey.jpg",
     "partyId": "party-rsp",
-    "pastElectionHistory": "First time candidate",
+    "pastExperience": "First time candidate",
     "agendas": [
       "Forest conservation",
       "Healthcare improvement",
@@ -6523,7 +6523,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/maya_bhatt.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Local activist",
+    "pastExperience": "Local activist",
     "agendas": [
       "Anti-corruption measures",
       "Electricity expansion",
@@ -6546,7 +6546,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sujata_shrestha.jpg",
     "partyId": "party-rpp",
-    "pastElectionHistory": "Business leader",
+    "pastExperience": "Business leader",
     "agendas": [
       "Healthcare improvement",
       "Local industry support",
@@ -6569,7 +6569,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/gita_yadav.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Business leader",
+    "pastExperience": "Business leader",
     "agendas": [
       "Road construction",
       "Education reform",
@@ -6592,7 +6592,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/asha_thapa.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Social worker",
+    "pastExperience": "Social worker",
     "agendas": [
       "Electricity expansion",
       "Forest conservation",
@@ -6615,7 +6615,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/gita_thapa.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Longtime party worker",
+    "pastExperience": "Longtime party worker",
     "agendas": [
       "Road construction",
       "Anti-corruption measures",
@@ -6638,7 +6638,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/suman_adhikari.jpg",
     "partyId": "party-uml",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Electricity expansion",
       "Clean water access",
@@ -6661,7 +6661,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/prakash_maharjan.jpg",
     "partyId": "party-rpp",
-    "pastElectionHistory": "Social worker",
+    "pastExperience": "Social worker",
     "agendas": [
       "Healthcare improvement",
       "Digital connectivity",
@@ -6684,7 +6684,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/bikram_gurung.jpg",
     "partyId": "party-uml",
-    "pastElectionHistory": "Social worker",
+    "pastExperience": "Social worker",
     "agendas": [
       "Education reform",
       "Infrastructure development",
@@ -6707,7 +6707,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/hari_bhatt.jpg",
     "partyId": "party-nc",
-    "pastElectionHistory": "First time candidate",
+    "pastExperience": "First time candidate",
     "agendas": [
       "Flood control",
       "Electricity expansion",
@@ -6730,7 +6730,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/raj_yadav.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Social worker",
+    "pastExperience": "Social worker",
     "agendas": [
       "Clean water access",
       "Local industry support",
@@ -6753,7 +6753,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sunita_bhatt.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Social worker",
+    "pastExperience": "Social worker",
     "agendas": [
       "Infrastructure development",
       "Agricultural support",
@@ -6776,7 +6776,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/asha_subedi.jpg",
     "partyId": "party-nc",
-    "pastElectionHistory": "Former Minister",
+    "pastExperience": "Former Minister",
     "agendas": [
       "Youth development",
       "Job creation",
@@ -6799,7 +6799,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/bishal_yadav.jpg",
     "partyId": "party-rsp",
-    "pastElectionHistory": "Business leader",
+    "pastExperience": "Business leader",
     "agendas": [
       "Digital connectivity",
       "Local industry support",
@@ -6822,7 +6822,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sujata_pandey.jpg",
     "partyId": "party-nc",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Youth development",
       "Road construction",
@@ -6845,7 +6845,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/bikram_adhikari.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Business leader",
+    "pastExperience": "Business leader",
     "agendas": [
       "Flood control",
       "Anti-corruption measures",
@@ -6868,7 +6868,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/prakash_maharjan.jpg",
     "partyId": "party-nc",
-    "pastElectionHistory": "Former Minister",
+    "pastExperience": "Former Minister",
     "agendas": [
       "Infrastructure development",
       "Agricultural support",
@@ -6891,7 +6891,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/kamal_pandey.jpg",
     "partyId": "party-nc",
-    "pastElectionHistory": "Social worker",
+    "pastExperience": "Social worker",
     "agendas": [
       "Youth development",
       "Education reform",
@@ -6914,7 +6914,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sunita_shrestha.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Former Minister",
+    "pastExperience": "Former Minister",
     "agendas": [
       "Flood control",
       "Road construction",
@@ -6937,7 +6937,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/kamal_subedi.jpg",
     "partyId": "party-nc",
-    "pastElectionHistory": "Former Minister",
+    "pastExperience": "Former Minister",
     "agendas": [
       "Anti-corruption measures",
       "Digital connectivity",
@@ -6960,7 +6960,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/asha_karki.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Social worker",
+    "pastExperience": "Social worker",
     "agendas": [
       "Women empowerment",
       "Youth development",
@@ -6983,7 +6983,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/krishna_thapa.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Former Minister",
+    "pastExperience": "Former Minister",
     "agendas": [
       "Youth development",
       "Road construction",
@@ -7006,7 +7006,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/sunita_thapa.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Longtime party worker",
+    "pastExperience": "Longtime party worker",
     "agendas": [
       "Job creation",
       "Education reform",
@@ -7029,7 +7029,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/krishna_pandey.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Local activist",
+    "pastExperience": "Local activist",
     "agendas": [
       "Women empowerment",
       "Digital connectivity",
@@ -7052,7 +7052,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/kunti_gurung.jpg",
     "partyId": "party-rsp",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Healthcare improvement",
       "Infrastructure development",
@@ -7075,7 +7075,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/manjita_pandey.jpg",
     "partyId": "party-uml",
-    "pastElectionHistory": "First time candidate",
+    "pastExperience": "First time candidate",
     "agendas": [
       "Road construction",
       "Agricultural support",
@@ -7098,7 +7098,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/narayan_chhetri.jpg",
     "partyId": "party-uml",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Local industry support",
       "Infrastructure development",
@@ -7121,7 +7121,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/manjita_maharjan.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Longtime party worker",
+    "pastExperience": "Longtime party worker",
     "agendas": [
       "Tourism promotion",
       "Job creation",
@@ -7144,7 +7144,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/bikram_bhatt.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Business leader",
+    "pastExperience": "Business leader",
     "agendas": [
       "Local industry support",
       "Tourism promotion",
@@ -7167,7 +7167,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/suraj_gurung.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Social worker",
+    "pastExperience": "Social worker",
     "agendas": [
       "Electricity expansion",
       "Tourism promotion",
@@ -7190,7 +7190,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/krishna_pandey.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "First time candidate",
+    "pastExperience": "First time candidate",
     "agendas": [
       "Education reform",
       "Forest conservation",
@@ -7213,7 +7213,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/priya_pokharel.jpg",
     "partyId": "party-mc",
-    "pastElectionHistory": "Business leader",
+    "pastExperience": "Business leader",
     "agendas": [
       "Local industry support",
       "Clean water access",
@@ -7236,7 +7236,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/ramesh_adhikari.jpg",
     "partyId": "party-rpp",
-    "pastElectionHistory": "Longtime party worker",
+    "pastExperience": "Longtime party worker",
     "agendas": [
       "Infrastructure development",
       "Road construction",
@@ -7259,7 +7259,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/ram_thapa.jpg",
     "partyId": "party-nc",
-    "pastElectionHistory": "Local activist",
+    "pastExperience": "Local activist",
     "agendas": [
       "Flood control",
       "Anti-corruption measures",
@@ -7282,7 +7282,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/krishna_pandey.jpg",
     "partyId": "party-uml",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Clean water access",
       "Women empowerment",
@@ -7305,7 +7305,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/suraj_pandey.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Former Mayor",
+    "pastExperience": "Former Mayor",
     "agendas": [
       "Tourism promotion",
       "Clean water access",
@@ -7328,7 +7328,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/suraj_adhikari.jpg",
     "partyId": "party-nc",
-    "pastElectionHistory": "Local activist",
+    "pastExperience": "Local activist",
     "agendas": [
       "Electricity expansion",
       "Job creation",
@@ -7351,7 +7351,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/kunti_karki.jpg",
     "partyId": "party-nc",
-    "pastElectionHistory": "Social worker",
+    "pastExperience": "Social worker",
     "agendas": [
       "Women empowerment",
       "Youth development",
@@ -7374,7 +7374,7 @@ export const candidatesData: Candidate[] =
     "gender": "Female",
     "photoURL": "/images/candidates/gita_rai.jpg",
     "partyId": "party-jp",
-    "pastElectionHistory": "Social worker",
+    "pastExperience": "Social worker",
     "agendas": [
       "Local industry support",
       "Education reform",
@@ -7397,7 +7397,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/bishal_karki.jpg",
     "partyId": "party-rsp",
-    "pastElectionHistory": "First time candidate",
+    "pastExperience": "First time candidate",
     "agendas": [
       "Digital connectivity",
       "Healthcare improvement",
@@ -7420,7 +7420,7 @@ export const candidatesData: Candidate[] =
     "gender": "Male",
     "photoURL": "/images/candidates/krishna_karki.jpg",
     "partyId": "party-rsp",
-    "pastElectionHistory": "Former Minister",
+    "pastExperience": "Former Minister",
     "agendas": [
       "Healthcare improvement",
       "Infrastructure development",
