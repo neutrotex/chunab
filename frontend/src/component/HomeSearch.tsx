@@ -14,6 +14,7 @@ import {
   type Candidate
 } from "../data/candidates";
 import CandidateCard from "./CandidateCard";
+import ComplaintModal from "./ComplaintModal";
 
 export default function HomeSearch() {
   const [selectedProvince, setSelectedProvince] = useState<string>("");
@@ -24,6 +25,7 @@ export default function HomeSearch() {
   const [candidates, setCandidates] = useState<Candidate[]>([]);
   const [showCandidates, setShowCandidates] = useState<boolean>(false);
   const [isClient, setIsClient] = useState(false);
+  const [selectedCandidateForComplaint, setSelectedCandidateForComplaint] = useState<Candidate | null>(null);
 
   // Ensure client-side rendering
   useEffect(() => {
@@ -171,7 +173,11 @@ export default function HomeSearch() {
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {candidates.map((candidate) => (
-                  <CandidateCard key={candidate.id} candidate={candidate} />
+                  <CandidateCard 
+                    key={candidate.id} 
+                    candidate={candidate} 
+                    onComplaintClick={setSelectedCandidateForComplaint}
+                  />
                 ))}
               </div>
             </div>
@@ -184,6 +190,15 @@ export default function HomeSearch() {
           )}
         </div>
       </section>
+
+      {/* Complaint Modal */}
+      {selectedCandidateForComplaint && (
+        <ComplaintModal
+          isOpen={!!selectedCandidateForComplaint}
+          onClose={() => setSelectedCandidateForComplaint(null)}
+          candidate={selectedCandidateForComplaint}
+        />
+      )}
     </div>
   );
 }

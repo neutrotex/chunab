@@ -5,9 +5,10 @@ import { type Candidate } from "../data/candidates";
 
 interface CandidateCardProps {
   candidate: Candidate;
+  onComplaintClick: (candidate: Candidate) => void;
 }
 
-export default function CandidateCard({ candidate }: CandidateCardProps) {
+export default function CandidateCard({ candidate, onComplaintClick }: CandidateCardProps) {
   const party = getPartyById(candidate.partyId);
 
   return (
@@ -138,15 +139,12 @@ export default function CandidateCard({ candidate }: CandidateCardProps) {
       <div className="mt-4 pt-4 border-t border-border/30">
         <button 
           className="w-full bg-primary/10 hover:bg-primary/20 text-primary border border-primary/30 hover:border-primary/50 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-[1.02]"
-          onClick={() => {
-            // Dummy function for now
-            alert('Complaint filing feature coming soon!');
-          }}
+          onClick={() => onComplaintClick(candidate)}
         >
           File a Complain to EO
         </button>
       </div>
-      
+
     </div>
   );
 }
