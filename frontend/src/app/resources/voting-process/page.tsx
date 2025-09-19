@@ -22,7 +22,7 @@ export default function VotingProcess() {
           number: 2,
           title: "Get Your Voter ID",
           icon: <FileText className="w-8 h-8" />,
-          description: "Once registered, you&apos;ll be issued a voter identity card.",
+          description: "Once registered, you'll be issued a voter identity card.",
           details: ["This card is required on election day to cast your vote"],
         },
         {
@@ -46,7 +46,7 @@ export default function VotingProcess() {
           icon: <CheckCircle className="w-8 h-8" />,
           description: "Your identity will be verified against the voter list.",
           details: [
-            "You&apos;ll receive two ballot papers:",
+            "You'll receive two ballot papers:",
             "FPTP ballot → for choosing a candidate in your constituency",
             "PR ballot → for choosing a political party",
             "Go into the secret voting booth",
@@ -56,7 +56,7 @@ export default function VotingProcess() {
           number: 6,
           title: "Casting Your Vote",
           icon: <Vote className="w-8 h-8" />,
-          description: "On the FPTP ballot, stamp/mark your chosen candidate&apos;s symbol.",
+          description: "On the FPTP ballot, stamp/mark your chosen candidate's symbol.",
           details: [
             "On the PR ballot, stamp/mark the party you want to support",
             "Be careful not to make stray marks — unclear votes may be invalid",
@@ -67,7 +67,7 @@ export default function VotingProcess() {
           title: "Submitting the Ballots",
           icon: <Users className="w-8 h-8" />,
           description: "Fold each ballot as instructed and drop it into the designated sealed ballot boxes.",
-          details: ["Your finger may be inked to indicate that you&apos;ve voted"],
+          details: ["Your finger may be inked to indicate that you've voted"],
         },
         {
           number: 8,
@@ -121,19 +121,21 @@ export default function VotingProcess() {
                   )}
     
                   <div className="flex flex-col md:flex-row items-start gap-8">
-                    {/* Step number and icon */}
-                    <div className="flex-shrink-0 flex items-center gap-6">
+                    {/* Step number */}
+                    <div className="flex-shrink-0">
                       <div className="w-16 h-16 bg-red-800 rounded-full flex items-center justify-center">
                         <span className="text-2xl font-bold text-white">{step.number}</span>
-                      </div>
-                      <div className="w-16 h-16 bg-red-800/20 rounded-full flex items-center justify-center text-red-800">
-                        {step.icon}
                       </div>
                     </div>
     
                     {/* Content */}
                     <div className="flex-1 space-y-4">
-                      <h3 className="text-3xl md:text-4xl font-bold">{step.title}</h3>
+                      <div className="flex items-center gap-10">
+                        <h3 className="text-3xl md:text-4xl font-bold">{step.title}</h3>
+                        <div className="w-16 h-16 bg-red-800/20 rounded-full flex items-center justify-center text-red-800">
+                          {step.icon}
+                        </div>
+                      </div>
                       <p className="text-lg md:text-xl text-foreground font-medium">{step.description}</p>
     
                       {step.details.length > 0 && (

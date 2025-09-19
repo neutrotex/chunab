@@ -29,25 +29,19 @@ export default function YouthUprising() {
   
           <div className="max-w-4xl mx-auto space-y-8">
             <p className="text-white leading-relaxed text-xl md:text-2xl font-light text-center">
-              On September 8–9, 2025, Nepal witnessed a powerful youth-led protest that shook the foundations of the
-              nation&apos;s politics. Sparked by the government&apos;s controversial ban on major social media platforms, thousands
-              of young people took to the streets demanding an end to corruption, censorship, and systemic inequality.
+              On September 8–9, 2025, Nepal witnessed a powerful youth-led uprising that shook the foundations of the nation&apos;s politics. Sparked by the dissatisfaction with the government&apos;s misuse of tax funds and Nepal&apos;s culture of corruption, thousands of young people took to the streets demanding an end to corruption, authoritative censorship, and systemic inequality.
             </p>
   
             <p className="text-gray-200 leading-relaxed text-xl md:text-2xl text-center">
-              What began as peaceful demonstrations quickly turned deadly as security forces responded with tear gas,
-              rubber bullets, and live ammunition, leading to the tragic deaths of nearly twenty protesters and injuries
-              to many more.
+             What began as peaceful demonstrations quickly turned deadly as security forces responded with tear gas, rubber bullets, and live ammunition, leading to the tragic deaths of nearly twenty protesters in one day, with the death toll rising up to 72 now. 
             </p>
   
             <p className="text-gray-200 leading-relaxed text-xl md:text-2xl text-center">
-              The sacrifice of these youths, hailed as martyrs, ignited nationwide outrage and forced the resignation of
-              senior officials, the lifting of the social media ban, and a political commitment to hold new elections.
+              The sacrifice of these youths, hailed as martyrs, ignited nationwide outrage and forced the resignation of senior officials, the lifting of the social media ban, and sparking a political commitment to hold new elections. 
             </p>
   
             <p className="text-red-300 leading-relaxed text-xl md:text-2xl font-medium text-center italic">
-              More than just a protest, the movement has come to symbolize a generational demand for accountability,
-              justice, and a new era of leadership in Nepal.
+             More than just a protest, the movement has come to symbolize a generational demand for accountability, justice, and a new era of leadership in Nepal.
             </p>
           </div>
         </div>
