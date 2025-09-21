@@ -33,7 +33,7 @@ export default function ElectionGuide() {
                 <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                    Federal <span className="text-primary">Parliament</span>
+                    <span className="text-primary">Federal</span> Parliament
                     </h2>
                     <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                     Nepal has a bicameral legislature with two houses working together to govern the nation
@@ -176,6 +176,30 @@ export default function ElectionGuide() {
             </section>
 
             <section className="py-24 px-6">
+                <div className="max-w-4xl mx-auto text-center">
+                    <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                    <span className="text-primary">Election</span> Video Guide
+                    </h2>
+                    <p className="text-xl text-muted-foreground mb-12">
+                        Watch this comprehensive guide to understand Nepal&apos;s electoral process
+                    </p>
+                    <div className="relative w-full max-w-4xl mx-auto">
+                        <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                            <iframe 
+                                className="absolute top-0 left-0 w-full h-full rounded-lg shadow-2xl"
+                                src="https://www.youtube.com/embed/IE53LCoIah0?si=qf6qkqfQtug8wZ1H" 
+                                title="YouTube video player" 
+                                frameBorder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                referrerPolicy="strict-origin-when-cross-origin" 
+                                allowFullScreen
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section className="py-24 px-6">
                 <div className="max-w-4xl mx-auto">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -224,7 +248,7 @@ export default function ElectionGuide() {
                 <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                    Why It <span className="text-primary">Matters</span>
+                    <span className="text-primary">Why </span>It Matters
                     </h2>
                     <p className="text-xl text-muted-foreground">Your vote shapes Nepal&apos;s future</p>
                 </div>
