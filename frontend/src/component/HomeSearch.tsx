@@ -84,7 +84,7 @@ export default function HomeSearch() {
       <section id="search" className="py-24 px-6 bg-black">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-5xl md:text-7xl font-bold mb-6 text-balance">
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-balance">
               Find Your <span className="text-primary">Constituency</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-12 text-pretty">

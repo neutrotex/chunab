@@ -3,11 +3,62 @@ import Footer from "@/component/Footer"
 import { ChevronDown, Users, BarChart3, AlertCircle, FileText, Calendar, Vote } from "lucide-react"
 import Image from "next/image"
 
+// Timeline data for House of Representatives election process
+const electionTimeline = [
+    {
+        id: 1,
+        nepali: "उम्मेदवारको मनोनयन पत्र दर्ता",
+        english: "Registration of Candidates' Nomination Papers"
+    },
+    {
+        id: 2,
+        nepali: "निर्वाचन आयोगद्वारा मनोनित उम्मेदवारको नामावली प्रकाशन",
+        english: "Publication of Nominated Candidates List by the Election Commission"
+    },
+    {
+        id: 3,
+        nepali: "उम्मेदवारविरुद्ध उजुरी दर्ता",
+        english: "Submission of Complaints Against Candidates"
+    },
+    {
+        id: 4,
+        nepali: "मनोनयन पत्र र उजुरीको सत्यापन तथा छानबिन",
+        english: "Verification and Investigation of Nomination Papers and Complaints"
+    },
+    {
+        id: 5,
+        nepali: "सत्यापित उम्मेदवारको नामावली प्रकाशन",
+        english: "Publication of Verified Candidates List"
+    },
+    {
+        id: 6,
+        nepali: "उम्मेदवारले मनोनयन फिर्ता लिन पाउने अन्तिम मिति (यदि लागू भएमा)",
+        english: "Withdrawal of Nominations by Candidates (if applicable)"
+    },
+    {
+        id: 7,
+        nepali: "अन्तिम उम्मेदवार नामावली प्रकाशन",
+        english: "Publication of Final Candidates List"
+    },
+    {
+        id: 8,
+        nepali: "उम्मेदवारलाई निर्वाचन चिन्ह तोक्नु",
+        english: "Allocation of Election Symbols to Candidates"
+    },
+    {
+        id: 9,
+        nepali: "मतदान गर्ने दिन",
+        english: "Voting Day",
+        isHighlighted: true
+    }
+]
+
 export default function ElectionGuide() {
     return (
         <div className="min-h-screen bg-background">
             <Navbar />
             
+            {/* Hero Section */}
             <section className="relative h-[50vh] flex items-center justify-center overflow-hidden pt-16">
                 <div className="absolute inset-0">
                 <Image
@@ -29,6 +80,7 @@ export default function ElectionGuide() {
                 </div>
             </section>
 
+            {/* Federal Parliament */}
             <section className="py-24 px-6">
                 <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-16">
@@ -106,6 +158,7 @@ export default function ElectionGuide() {
                 </div>
             </section>
 
+            {/* Upcoming Elections */}
             <section className="py-20 px-6">
                 <div className="max-w-4xl mx-auto text-center">
                 <div className="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-8">
@@ -122,6 +175,7 @@ export default function ElectionGuide() {
                 </div>
             </section>
 
+            {/* How to Vote */}
             <section className="py-24 px-6">
                 <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-16">
@@ -175,6 +229,7 @@ export default function ElectionGuide() {
                 </div>
             </section>
 
+            {/* Election Video Guide */}
             <section className="py-24 px-6">
                 <div className="max-w-4xl mx-auto text-center">
                     <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -199,6 +254,7 @@ export default function ElectionGuide() {
                 </div>
             </section>
             
+            {/* Voting Eligibility */}
             <section className="py-24 px-6">
                 <div className="max-w-4xl mx-auto">
                 <div className="text-center mb-16">
@@ -244,6 +300,7 @@ export default function ElectionGuide() {
                 </div>
             </section>
 
+            {/* Why It Matters */}
             <section className="py-24 px-6">
                 <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-16">
@@ -308,6 +365,49 @@ export default function ElectionGuide() {
                     </div>
                     </div>
                 </div>
+                </div>
+            </section>
+
+            {/* Election Timeline Section */}
+            <section className="py-24 px-6">
+                <div className="max-w-6xl mx-auto">
+                    <div className="text-center mb-16">
+                        <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                            <span className="text-primary">प्रतिनिधिसभा <span className="text-white">निर्वाचनको </span> समयरेखा</span>
+                        </h2>
+                        <p className="text-xl text-muted-foreground mb-4">Timeline of House of Representatives Elections</p>
+                    </div>
+
+                    <div className="space-y-8">
+                        {electionTimeline.map((step) => (
+                            <div 
+                                key={step.id}
+                                className={`flex items-start space-x-6 p-6 rounded-lg border ${
+                                    step.isHighlighted 
+                                        ? 'bg-primary/10 border-2 border-primary' 
+                                        : 'bg-card'
+                                }`}
+                            >
+                                {/* Step number indicator */}
+                                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                                    <span className="text-white font-bold text-lg">{step.id}</span>
+                                </div>
+                                
+                                {/* Step content */}
+                                <div className="flex-1">
+                                    {/* Nepali title */}
+                                    <h3 className="text-xl font-bold mb-2 text-foreground">
+                                        {step.nepali}
+                                    </h3>
+                                    
+                                    {/* English translation */}
+                                    <p className="text-muted-foreground text-lg">
+                                        {step.english}
+                                    </p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </section>
             

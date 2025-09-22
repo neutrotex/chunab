@@ -7,7 +7,7 @@ export default function HomeWhy() {
         <section id="why-chunab" className="py-32 px-6 relative overflow-hidden bg-black">
             <div className="max-w-7xl mx-auto">
             <div className="text-center mb-20">
-                <h2 className="text-5xl md:text-7xl font-bold mb-6">
+                <h2 className="text-5xl md:text-6xl font-bold mb-6">
                 Why <span className="text-primary">Chunab</span>?
                 </h2>
                 <div className="w-24 h-1 bg-primary mx-auto"></div>
@@ -28,7 +28,7 @@ export default function HomeWhy() {
                     </div>
                 </div>
                 <div className="lg:w-1/2 text-center lg:text-left">
-                    <div className="text-8xl font-bold text-primary mb-4">01</div>
+                    <div className="text-7xl font-bold text-primary mb-4">01</div>
                     <p className="text-xl text-muted-foreground">
                     Know who you&apos;re voting for with detailed candidate information
                     </p>
@@ -47,7 +47,7 @@ export default function HomeWhy() {
                     </div>
                 </div>
                 <div className="lg:w-1/2 text-center lg:text-right">
-                    <div className="text-8xl font-bold text-primary mb-4">02</div>
+                    <div className="text-7xl font-bold text-primary mb-4">02</div>
                     <p className="text-xl text-muted-foreground">
                     Understand the policies that will shape Nepal&apos;s tomorrow
                     </p>
@@ -66,7 +66,7 @@ export default function HomeWhy() {
                     </div>
                 </div>
                 <div className="lg:w-1/2 text-center lg:text-left">
-                    <div className="text-8xl font-bold text-primary mb-4">03</div>
+                    <div className="text-7xl font-bold text-primary mb-4">03</div>
                     <p className="text-xl text-muted-foreground">Stay updated with live election results as they happen</p>
                 </div>
                 </div>
