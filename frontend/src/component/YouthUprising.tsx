@@ -18,7 +18,7 @@ export default function YouthUprising() {
         {/* Content */}
         <div className="relative z-10 max-w-6xl mx-auto px-6 py-20">
           <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-7xl font-bold mb-8 text-white leading-tight">
+            <h2 className="text-5xl md:text-6xl font-bold mb-8 text-white leading-tight">
               <span className="text-primary">Youth</span> Uprising
             </h2>
             <div className="w-32 h-1 bg-primary mx-auto mb-8"></div>

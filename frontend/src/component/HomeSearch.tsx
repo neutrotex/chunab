@@ -6,8 +6,10 @@ import {
   nepalData, 
   getDistrictsByProvince, 
   getConstituenciesByDistrict,
+  getBoothLocationsByConstituency,
   type District,
-  type Constituency
+  type Constituency,
+  type BoothLocation
 } from "../data/nepalConstituencies";
 import { 
   getCandidatesByConstituency,
@@ -15,6 +17,7 @@ import {
 } from "../data/candidates";
 import CandidateCard from "./CandidateCard";
 import ComplaintModal from "./ComplaintModal";
+import DynamicMap from "./DynamicMap";
 
 export default function HomeSearch() {
   const [selectedProvince, setSelectedProvince] = useState<string>("");
@@ -26,6 +29,7 @@ export default function HomeSearch() {
   const [showCandidates, setShowCandidates] = useState<boolean>(false);
   const [isClient, setIsClient] = useState(false);
   const [selectedCandidateForComplaint, setSelectedCandidateForComplaint] = useState<Candidate | null>(null);
+  const [boothLocations, setBoothLocations] = useState<BoothLocation[]>([]);
 
   // Ensure client-side rendering
   useEffect(() => {
@@ -65,14 +69,17 @@ export default function HomeSearch() {
     }
   }, [selectedDistrict, selectedProvince]);
 
-  // Load candidates when constituency is selected
+  // Load candidates and booth locations when constituency is selected
   useEffect(() => {
     if (selectedConstituency) {
       const constituencyCandidates = getCandidatesByConstituency(selectedConstituency);
+      const constituencyBoothLocations = getBoothLocationsByConstituency(selectedConstituency);
       setCandidates(constituencyCandidates);
+      setBoothLocations(constituencyBoothLocations);
       setShowCandidates(true);
     } else {
       setCandidates([]);
+      setBoothLocations([]);
       setShowCandidates(false);
     }
   }, [selectedConstituency]);
@@ -84,7 +91,7 @@ export default function HomeSearch() {
       <section id="search" className="py-24 px-6 bg-black">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-5xl md:text-7xl font-bold mb-6 text-balance">
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 text-balance">
               Find Your <span className="text-primary">Constituency</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-12 text-pretty">
@@ -186,6 +193,32 @@ export default function HomeSearch() {
           {showCandidates && candidates.length === 0 && (
             <div className="mt-12 text-center">
               <p className="text-muted-foreground text-lg">No candidates found for the selected constituency.</p>
+            </div>
+          )}
+
+          {/* Booth Locations Map Section */}
+          {showCandidates && boothLocations.length > 0 && (
+            <div className="mt-12">
+              <h3 className="text-3xl font-bold text-center mb-8">
+                Voting Booth Locations for {constituencies.find(c => c.id === selectedConstituency)?.name}
+              </h3>
+              <div className="bg-card/10 backdrop-blur-sm rounded-2xl p-6 border border-border/30">
+                <DynamicMap 
+                  boothLocations={boothLocations}
+                  constituencyName={constituencies.find(c => c.id === selectedConstituency)?.name || ""}
+                />
+                <div className="mt-4 text-center">
+                  <p className="text-sm text-muted-foreground">
+                    {boothLocations.length} booth location{boothLocations.length !== 1 ? 's' : ''} found
+                  </p>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {showCandidates && boothLocations.length === 0 && candidates.length > 0 && (
+            <div className="mt-12 text-center">
+              <p className="text-muted-foreground text-lg">No booth location data available for the selected constituency.</p>
             </div>
           )}
         </div>

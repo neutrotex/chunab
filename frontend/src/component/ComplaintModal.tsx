@@ -178,7 +178,6 @@ export default function ComplaintModal({ isOpen, onClose, candidate }: Complaint
               <p>The individual,</p>
               <div>
                 ${formData.grounds.map((ground, index) => {
-                  const groundIndex = complaintGrounds.indexOf(ground);
                   const englishGround = ground.split('/')[0].trim();
                   return `<p><strong>${index + 1}.</strong> ${englishGround}</p>`;
                 }).join('')}
