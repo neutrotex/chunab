@@ -6,9 +6,10 @@ import { type Candidate } from "../data/candidates";
 interface CandidateCardProps {
   candidate: Candidate;
   onComplaintClick: (candidate: Candidate) => void;
+  onMisconductClick: (candidate: Candidate) => void;
 }
 
-export default function CandidateCard({ candidate, onComplaintClick }: CandidateCardProps) {
+export default function CandidateCard({ candidate, onComplaintClick, onMisconductClick }: CandidateCardProps) {
   const party = getPartyById(candidate.partyId);
 
   return (
@@ -135,13 +136,19 @@ export default function CandidateCard({ candidate, onComplaintClick }: Candidate
         </div>
       )}
 
-      {/* File Complaint Button */}
-      <div className="mt-4 pt-4 border-t border-border/30">
+      {/* Action Buttons */}
+      <div className="mt-4 pt-4 border-t border-border/30 space-y-2">
         <button 
-          className="w-full bg-primary/10 hover:bg-primary/20 text-primary border border-primary/30 hover:border-primary/50 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-[1.02]"
+          className="w-full bg-red-500/10 hover:bg-red-500/20 text-red-500 border border-red-500/30 hover:border-red-500/50 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-[1.02]"
           onClick={() => onComplaintClick(candidate)}
         >
-          File a Complain to EO
+          Complaint against Candidate
+        </button>
+        <button 
+          className="w-full bg-red-500/10 hover:bg-red-500/20 text-red-500 border border-red-500/30 hover:border-red-500/50 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-[1.02]"
+          onClick={() => onMisconductClick(candidate)}
+        >
+          Report Election Misconduct
         </button>
       </div>
 

@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { X, Upload, FileText, User, Calendar, MapPin } from "lucide-react";
 import { type Candidate } from "../data/candidates";
+import { getPartyById } from "../data/parties";
+import { nepalData } from "../data/nepalConstituencies";
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
 import "jspdf-autotable";
@@ -33,12 +35,30 @@ const complaintGrounds = [
 ];
 
 export default function ComplaintModal({ isOpen, onClose, candidate }: ComplaintModalProps) {
+  const party = getPartyById(candidate.partyId);
+  
+  // Get constituency and district info directly
+  let constituencyNumber = "";
+  let districtName = "";
+  
+  for (const province of nepalData) {
+    for (const district of province.districts) {
+      for (const constituency of district.constituencies) {
+        if (constituency.id === candidate.constituencyId) {
+          constituencyNumber = constituency.number.toString();
+          districtName = district.name;
+          break;
+        }
+      }
+    }
+  }
+
   const [formData, setFormData] = useState({
-    constituencyNo: "",
-    district: "",
+    constituencyNo: constituencyNumber,
+    district: districtName,
     candidateName: candidate.name,
     candidateRegNo: "",
-    politicalParty: "",
+    politicalParty: party?.name || "",
     grounds: [] as string[],
     evidenceFiles: [] as File[],
     date: new Date().toISOString().split('T')[0],
@@ -142,7 +162,6 @@ export default function ComplaintModal({ isOpen, onClose, candidate }: Complaint
             text-align: right;
             margin-top: 40px;
             padding-top: 20px;
-            border-top: 1px solid #cccccc;
           }
           .petitioner-details h3 {
             margin-bottom: 15px;
@@ -315,6 +334,9 @@ export default function ComplaintModal({ isOpen, onClose, candidate }: Complaint
               <FileText className="w-5 h-5 text-primary" />
               Basic Information / आधारभूत विवरण
             </h3>
+            <p className="text-sm text-muted-foreground">
+              * Constituency, District, and Political Party are automatically filled based on the selected candidate
+            </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
@@ -324,9 +346,8 @@ export default function ComplaintModal({ isOpen, onClose, candidate }: Complaint
                 <input
                   type="text"
                   value={formData.constituencyNo}
-                  onChange={(e) => setFormData(prev => ({ ...prev, constituencyNo: e.target.value }))}
-                  className="w-full px-4 py-2 bg-input border border-border/30 rounded-lg focus:border-primary focus:outline-none"
-                  required
+                  readOnly
+                  className="w-full px-4 py-2 bg-muted/50 border border-border/30 rounded-lg text-muted-foreground cursor-not-allowed"
                 />
               </div>
               
@@ -337,9 +358,8 @@ export default function ComplaintModal({ isOpen, onClose, candidate }: Complaint
                 <input
                   type="text"
                   value={formData.district}
-                  onChange={(e) => setFormData(prev => ({ ...prev, district: e.target.value }))}
-                  className="w-full px-4 py-2 bg-input border border-border/30 rounded-lg focus:border-primary focus:outline-none"
-                  required
+                  readOnly
+                  className="w-full px-4 py-2 bg-muted/50 border border-border/30 rounded-lg text-muted-foreground cursor-not-allowed"
                 />
               </div>
               
@@ -376,9 +396,8 @@ export default function ComplaintModal({ isOpen, onClose, candidate }: Complaint
                 <input
                   type="text"
                   value={formData.politicalParty}
-                  onChange={(e) => setFormData(prev => ({ ...prev, politicalParty: e.target.value }))}
-                  className="w-full px-4 py-2 bg-input border border-border/30 rounded-lg focus:border-primary focus:outline-none"
-                  required
+                  readOnly
+                  className="w-full px-4 py-2 bg-muted/50 border border-border/30 rounded-lg text-muted-foreground cursor-not-allowed"
                 />
               </div>
             </div>

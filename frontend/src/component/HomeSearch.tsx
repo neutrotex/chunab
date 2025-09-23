@@ -17,6 +17,7 @@ import {
 } from "../data/candidates";
 import CandidateCard from "./CandidateCard";
 import ComplaintModal from "./ComplaintModal";
+import MisconductModal from "./MisconductModal";
 import DynamicMap from "./DynamicMap";
 
 export default function HomeSearch() {
@@ -29,6 +30,7 @@ export default function HomeSearch() {
   const [showCandidates, setShowCandidates] = useState<boolean>(false);
   const [isClient, setIsClient] = useState(false);
   const [selectedCandidateForComplaint, setSelectedCandidateForComplaint] = useState<Candidate | null>(null);
+  const [selectedCandidateForMisconduct, setSelectedCandidateForMisconduct] = useState<Candidate | null>(null);
   const [boothLocations, setBoothLocations] = useState<BoothLocation[]>([]);
 
   // Ensure client-side rendering
@@ -184,6 +186,7 @@ export default function HomeSearch() {
                     key={candidate.id} 
                     candidate={candidate} 
                     onComplaintClick={setSelectedCandidateForComplaint}
+                    onMisconductClick={setSelectedCandidateForMisconduct}
                   />
                 ))}
               </div>
@@ -230,6 +233,14 @@ export default function HomeSearch() {
           isOpen={!!selectedCandidateForComplaint}
           onClose={() => setSelectedCandidateForComplaint(null)}
           candidate={selectedCandidateForComplaint}
+        />
+      )}
+
+      {/* Misconduct Modal */}
+      {selectedCandidateForMisconduct && (
+        <MisconductModal
+          isOpen={!!selectedCandidateForMisconduct}
+          onClose={() => setSelectedCandidateForMisconduct(null)}
         />
       )}
     </div>
