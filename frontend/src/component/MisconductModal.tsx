@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { X, Upload, FileText, User, Calendar, MapPin, AlertTriangle } from "lucide-react";
+import { X, Upload, FileText, User, AlertTriangle } from "lucide-react";
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
 import "jspdf-autotable";
@@ -678,7 +678,7 @@ export default function MisconductModal({ isOpen, onClose }: MisconductModalProp
           <div className="space-y-6">
             <h3 className="text-xl font-semibold text-foreground flex items-center gap-2">
               <User className="w-5 h-5 text-primary" />
-              Complainant's Details / उजुरीकर्ताको विवरण
+              Complainant&apos;s Details / उजुरीकर्ताको विवरण
             </h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
