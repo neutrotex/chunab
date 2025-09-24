@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import { X, Upload, FileText, User, Calendar, MapPin } from "lucide-react";
+import React, { useState } from "react";
+import { X, Upload, FileText, User, Calendar, MapPin, AlertTriangle } from "lucide-react";
 import { type Candidate } from "../data/candidates";
 import { getPartyById } from "../data/parties";
 import { nepalData } from "../data/nepalConstituencies";
@@ -35,7 +35,15 @@ const complaintGrounds = [
 ];
 
 export default function ComplaintModal({ isOpen, onClose, candidate }: ComplaintModalProps) {
+  const [showDisclaimer, setShowDisclaimer] = useState(true);
   const party = getPartyById(candidate.partyId);
+  
+  // Reset disclaimer when modal opens
+  React.useEffect(() => {
+    if (isOpen) {
+      setShowDisclaimer(true);
+    }
+  }, [isOpen]);
   
   // Get constituency and district info directly
   let constituencyNumber = "";
@@ -154,9 +162,11 @@ export default function ComplaintModal({ isOpen, onClose, candidate }: Complaint
           .header {
             text-align: center;
             margin-bottom: 30px;
+            font-size: 12px;
+            font-weight: bold;
           }
           .section {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
           }
           .petitioner-details {
             text-align: right;
@@ -173,62 +183,77 @@ export default function ComplaintModal({ isOpen, onClose, candidate }: Complaint
             font-size: 12px;
             line-height: 1.4;
           }
+          .grounds-list {
+            margin-left: 15px;
+          }
+          .grounds-list p {
+            margin-bottom: 5px;
+            font-size: 11px;
+          }
+          .form-field {
+            margin-bottom: 8px;
+          }
+          .form-label {
+            font-weight: bold;
+            margin-bottom: 2px;
+          }
         </style>
       </head>
       <body>
         <div class="container">
           <div class="main-content">
             <div class="header">
-              <h1>COMPLAINT AGAINST CANDIDATE NOMINATION</h1>
+              <h1>उम्मेदवारको मनोनयनपत्र विरुद्धको उजुरी</h1>
             </div>
             
             <div class="section">
-              <p><strong>To: Election Officer,</strong></p>
-              <p>House of Representatives Member Election Area No. ${formData.constituencyNo}</p>
-              <p>${formData.district} District.</p>
+              <p><strong>श्री निर्वाचन अधिकृत,</strong></p>
+              <p>प्रतिनिधि सभा सदस्य निर्वाचन क्षेत्र नं ${formData.constituencyNo}</p>
+              <p>${formData.district} जिल्ला।</p>
             </div>
             
             <div class="section">
-              <p>In the election for the post of House of Representatives member from District, Election Area No. ${formData.constituencyNo}, Mr./Ms. ${formData.candidateName} whose nomination paper was registered under registration no. ${formData.candidateRegNo} as a candidate from ${formData.politicalParty} / independent candidate is ineligible to be a candidate for that post due to the following reasons, therefore, this complaint is filed to request the cancellation of their nomination paper.</p>
+              <p>${formData.district} जिल्ला, प्रतिनिधि सभा सदस्य निर्वाचन क्षेत्र नं ${formData.constituencyNo} बाट प्रतिनिधि सभा सदस्य पदको निर्वाचनमा ${formData.politicalParty} राजनीतिक दलको तर्फबाट / स्वतन्त्र उम्मेदवार हुनका लागि दर्ता नं ${formData.candidateRegNo} मा मनोनयनपत्र दर्ता भएका श्री ${formData.candidateName} निम्नलिखित कारणले सो पदमा उम्मेदवार हुन अयोग्य भएकोले निजको मनोनयनपत्र खारेज गरी पाउन यो उजुरी दिएको छु।</p>
             </div>
             
             <div class="section">
-              <h3>GROUNDS FOR COMPLAINT:</h3>
-              <p>The individual,</p>
-              <div>
+              <p><strong>उजुरीको कारण:</strong></p>
+              <p>निज व्यक्ति,</p>
+              <div class="grounds-list">
                 ${formData.grounds.map((ground, index) => {
-                  const englishGround = ground.split('/')[0].trim();
-                  return `<p><strong>${index + 1}.</strong> ${englishGround}</p>`;
+                  const nepaliGround = ground.split('/')[1]?.trim() || ground;
+                  return `<p>${index + 1}. ${nepaliGround}</p>`;
                 }).join('')}
               </div>
             </div>
             
             <div class="section">
-              <h3>EVIDENCE ATTACHED:</h3>
-              ${formData.evidenceFiles.length > 0 ? `
-                <div>
-                  ${formData.evidenceFiles.map((file, index) => `
-                    <p>${index + 1}. ${file.name}</p>
-                  `).join('')}
-                </div>
-              ` : '<p>(No evidence materials attached)</p>'}
-            </div>
-            
-            <div class="section">
-              <p><strong>Date:</strong> ${formData.date}</p>
-              <p><strong>Time:</strong> ${formData.time}</p>
-              <p><strong>Candidate/Representative of Candidate:</strong> ${formData.candidateRepName || 'N/A'}</p>
+              <div class="form-field">
+                <p class="form-label">संलग्न प्रमाण: ${formData.evidenceFiles.length > 0 ? formData.evidenceFiles.map(file => file.name).join(', ') : 'छैन'}</p>
+              </div>
+              
+              <div class="form-field">
+                <p class="form-label">मिति: ${formData.date}</p>
+              </div>
+              
+              <div class="form-field">
+                <p class="form-label">समय: ${formData.time}</p>
+              </div>
+              
+              <div class="form-field">
+                <p class="form-label">उम्मेदवार/ उम्मेदवारको प्रतिनिधि: ${formData.candidateRepName || '_________________'}</p>
+              </div>
             </div>
           </div>
           
           <div class="petitioner-details">
-            <h3>COMPLAINANT DETAILS:</h3>
-            <p><strong>Name, Surname:</strong> ${formData.petitionerName}</p>
-            <p><strong>Signature:</strong> ${formData.petitionerSignature}</p>
-            <p><strong>Voter ID No.:</strong> ${formData.voterNumber}</p>
-            <p><strong>Contact Address:</strong> ${formData.petitionerAddress}</p>
-            <p><strong>Contact Phone No. / Mobile No.:</strong> ${formData.petitionerPhone}</p>
-            <p><strong>Date:</strong> ${formData.date}</p>
+            <h3>उजुरीकर्ताको विवरण:</h3>
+            <p><strong>नाम, थर:</strong> ${formData.petitionerName || '_________________'}</p>
+            <p><strong>सहीछाप:</strong> ${formData.petitionerSignature || '_________________'}</p>
+            <p><strong>मतदाता परिचयपत्र नं:</strong> ${formData.voterNumber || '_________________'}</p>
+            <p><strong>सम्पर्क ठेगाना:</strong> ${formData.petitionerAddress || '_________________'}</p>
+            <p><strong>सम्पर्क फोन नं. / मोबाईल नं.:</strong> ${formData.petitionerPhone || '_________________'}</p>
+            <p><strong>मिति:</strong> ${formData.date || '_________________'}</p>
           </div>
         </div>
       </body>
@@ -313,6 +338,69 @@ export default function ComplaintModal({ isOpen, onClose, candidate }: Complaint
   };
 
   if (!isOpen) return null;
+
+  // Show disclaimer modal first
+  if (showDisclaimer) {
+    return (
+      <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[9999] flex items-center justify-center">
+        <div className="bg-card border border-border/30 rounded-2xl w-full max-w-md mx-4">
+          <div className="p-6">
+            <div className="text-center mb-6">
+              <AlertTriangle className="w-12 h-12 text-amber-500 mx-auto mb-4" />
+              <h2 className="text-2xl font-bold text-foreground mb-2">
+                Important Notice / महत्वपूर्ण सूचना
+              </h2>
+            </div>
+            
+            <div className="space-y-4 text-foreground">
+              <p className="text-sm leading-relaxed">
+                <strong>Please Note:</strong> This form should be filled in <strong>Nepali language</strong> for official purposes. 
+                The PDF output will be generated in Nepali script.
+              </p>
+              
+              <p className="text-sm leading-relaxed">
+                <strong>नोट:</strong> यो फारम आधिकारिक उद्देश्यका लागि <strong>नेपाली भाषामा</strong> भरिनु पर्छ। 
+                PDF आउटपुट नेपाली लिपिमा उत्पादन हुनेछ।
+              </p>
+              
+              <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
+                <p className="text-sm font-medium text-blue-800 dark:text-blue-200 mb-2">
+                  Need help typing in Nepali? / नेपालीमा टाइप गर्न सहयोग चाहिएको?
+                </p>
+                <p className="text-xs text-blue-700 dark:text-blue-300 mb-3">
+                  Use the romanized Nepali converter to type in English and convert to Nepali script:
+                </p>
+                <a
+                  href="https://www.ashesh.com.np/nepali-unicode.php"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 underline"
+                >
+                  <FileText className="w-4 h-4" />
+                  Nepali Unicode Converter
+                </a>
+              </div>
+            </div>
+            
+            <div className="flex gap-3 mt-6">
+              <button
+                onClick={() => setShowDisclaimer(false)}
+                className="flex-1 px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors"
+              >
+                I Understand / मैले बुझे
+              </button>
+              <button
+                onClick={onClose}
+                className="flex-1 px-4 py-2 border border-border/30 text-foreground rounded-lg hover:bg-muted/50 transition-colors"
+              >
+                Cancel / रद्द गर्नुहोस्
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center">

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import { X, Upload, FileText, User, AlertTriangle } from "lucide-react";
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
@@ -51,6 +51,14 @@ const electoralOffenseCategories = {
 };
 
 export default function MisconductModal({ isOpen, onClose }: MisconductModalProps) {
+  const [showDisclaimer, setShowDisclaimer] = useState(true);
+
+  // Reset disclaimer when modal opens
+  React.useEffect(() => {
+    if (isOpen) {
+      setShowDisclaimer(true);
+    }
+  }, [isOpen]);
   const [formData, setFormData] = useState({
     // Basic Information
     constituencyNo: "",
@@ -379,8 +387,71 @@ export default function MisconductModal({ isOpen, onClose }: MisconductModalProp
 
   if (!isOpen) return null;
 
+  // Show disclaimer modal first
+  if (showDisclaimer) {
+    return (
+      <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[9999] flex items-center justify-center">
+        <div className="bg-card border border-border/30 rounded-2xl w-full max-w-md mx-4">
+          <div className="p-6">
+            <div className="text-center mb-6">
+              <AlertTriangle className="w-12 h-12 text-amber-500 mx-auto mb-4" />
+              <h2 className="text-2xl font-bold text-foreground mb-2">
+                Important Notice / महत्वपूर्ण सूचना
+              </h2>
+            </div>
+            
+            <div className="space-y-4 text-foreground">
+              <p className="text-sm leading-relaxed">
+                <strong>Please Note:</strong> This form should be filled in <strong>Nepali language</strong> for official purposes. 
+                The PDF output will be generated in Nepali script.
+              </p>
+              
+              <p className="text-sm leading-relaxed">
+                <strong>नोट:</strong> यो फारम आधिकारिक उद्देश्यका लागि <strong>नेपाली भाषामा</strong> भरिनु पर्छ। 
+                PDF आउटपुट नेपाली लिपिमा उत्पादन हुनेछ।
+              </p>
+              
+              <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
+                <p className="text-sm font-medium text-blue-800 dark:text-blue-200 mb-2">
+                  Need help typing in Nepali? / नेपालीमा टाइप गर्न सहयोग चाहिएको?
+                </p>
+                <p className="text-xs text-blue-700 dark:text-blue-300 mb-3">
+                  Use the romanized Nepali converter to type in English and convert to Nepali script:
+                </p>
+                <a
+                  href="https://www.ashesh.com.np/nepali-unicode.php"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 underline"
+                >
+                  <FileText className="w-4 h-4" />
+                  Nepali Unicode Converter
+                </a>
+              </div>
+            </div>
+            
+            <div className="flex gap-3 mt-6">
+              <button
+                onClick={() => setShowDisclaimer(false)}
+                className="flex-1 px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors"
+              >
+                I Understand / मैले बुझे
+              </button>
+              <button
+                onClick={onClose}
+                className="flex-1 px-4 py-2 border border-border/30 text-foreground rounded-lg hover:bg-muted/50 transition-colors"
+              >
+                Cancel / रद्द गर्नुहोस्
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center">
+    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[9999] flex items-center justify-center">
       <div className="bg-card border border-border/30 rounded-2xl w-full h-full max-w-none max-h-none overflow-y-auto">
         <div className="sticky top-0 bg-card border-b border-border/30 p-6 flex items-center justify-between">
           <h2 className="text-2xl font-bold text-foreground flex items-center gap-2">
