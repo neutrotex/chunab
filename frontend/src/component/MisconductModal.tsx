@@ -391,7 +391,7 @@ export default function MisconductModal({ isOpen, onClose }: MisconductModalProp
   if (showDisclaimer) {
     return (
       <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[9999] flex items-center justify-center">
-        <div className="bg-card border border-border/30 rounded-2xl w-full max-w-md mx-4">
+        <div className="bg-card border border-border/30 rounded-2xl w-full max-w-md mx-4 max-h-[90vh] overflow-y-auto">
           <div className="p-6">
             <div className="text-center mb-6">
               <AlertTriangle className="w-12 h-12 text-amber-500 mx-auto mb-4" />
@@ -401,6 +401,22 @@ export default function MisconductModal({ isOpen, onClose }: MisconductModalProp
             </div>
             
             <div className="space-y-4 text-foreground">
+
+              <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg p-4">
+                <h4 className="text-sm font-semibold text-amber-800 dark:text-amber-200 mb-3">
+                  Important Disclaimer / महत्वपूर्ण अस्वीकरण
+                </h4>
+                <div className="text-xs text-amber-700 dark:text-amber-300 space-y-2">
+                  <p><strong>I hereby declare that:</strong> / <strong>मैले यहाँ घोषणा गर्दछु कि:</strong></p>
+                  <ul className="list-disc list-inside space-y-1 ml-2">
+                    <li>The information provided in this report is genuine, truthful, and based on my personal knowledge and observations. / यो रिपोर्टमा प्रदान गरिएको जानकारी प्रामाणिक, सत्य र मेरो व्यक्तिगत ज्ञान र अवलोकनमा आधारित छ।</li>
+                    <li>I understand that <strong>Neutrotex Computer IT Solutions and Innovation Pvt. Ltd.</strong> is acting solely as a technical mediator and platform provider for this complaint submission system. / मैले बुझेको छु कि <strong>न्युट्रोटेक्स कम्प्युटर आईटी सलुसन्स एन्ड इनोभेसन प्राइभेट लिमिटेड</strong> यो उजुरी पेश गर्ने प्रणालीका लागि केवल प्राविधिक मध्यस्थ र प्लेटफर्म प्रदायकको रूपमा काम गरिरहेको छ।</li>
+                    <li>I acknowledge that Neutrotex Computer IT Solutions and Innovation Pvt. Ltd. is not responsible for the accuracy, authenticity, or legal validity of the information provided in this complaint. / मैले स्वीकार गरेको छु कि न्युट्रोटेक्स कम्प्युटर आईटी सलुसन्स एन्ड इनोभेसन प्राइभेट लिमिटेड यो उजुरीमा प्रदान गरिएको जानकारीको सटीकता, प्रामाणिकता वा कानुनी वैधताको लागि जिम्मेवार छैन।</li>
+                    <li>I understand that any legal consequences arising from false or misleading information in this complaint are solely my responsibility. / मैले बुझेको छु कि यो उजुरीमा गलत वा भ्रामक जानकारीबाट उत्पन्न हुने कुनै पनि कानुनी परिणामहरू मेरो व्यक्तिगत जिम्मेवारी हो।</li>
+                  </ul>
+                </div>
+              </div>
+
               <p className="text-sm leading-relaxed">
                 <strong>Please Note:</strong> This form should be filled in <strong>Nepali language</strong> for official purposes. 
                 The PDF output will be generated in Nepali script.
