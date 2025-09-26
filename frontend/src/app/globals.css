@@ -196,3 +196,44 @@ body {
 .navbar-pulse {
   animation: subtle-pulse 4s ease-in-out infinite;
 }
+
+/* Admin sidebar arrow transitions */
+.sidebar-arrow {
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebar-arrow.collapsed {
+  transform: rotate(180deg);
+}
+
+.sidebar-arrow.expanded {
+  transform: rotate(0deg);
+}
+
+/* Admin color utilities */
+.admin-bg {
+  background-color: var(--sidebar);
+}
+
+.admin-text {
+  color: var(--sidebar-foreground);
+}
+
+.admin-primary {
+  background-color: var(--sidebar-primary);
+  color: var(--sidebar-primary-foreground);
+}
+
+.admin-accent {
+  background-color: var(--sidebar-accent);
+  color: var(--sidebar-accent-foreground);
+}
+
+.admin-border {
+  border-color: var(--sidebar-border);
+}
+
+.admin-hover:hover {
+  background-color: var(--sidebar-accent);
+  color: var(--sidebar-accent-foreground);
+}
