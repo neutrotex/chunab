@@ -2,6 +2,7 @@
 
 import AdminLayout from '@/component/AdminLayout';
 import Link from 'next/link';
+import { Users, CheckCircle, AlertTriangle, Building2 } from 'lucide-react';
 
 export default function AdminDashboard() {
   // TODO: Replace with actual API calls to database
@@ -22,7 +23,7 @@ export default function AdminDashboard() {
               <div className="flex items-center">
                 <div className="flex-shrink-0">
                   <div className="w-8 h-8 rounded-md flex items-center justify-center" style={{ backgroundColor: 'var(--primary)' }}>
-                    <span className="text-sm font-medium" style={{ color: 'var(--primary-foreground)' }}>C</span>
+                    <Users className="w-5 h-5" style={{ color: 'var(--primary-foreground)' }} />
                   </div>
                 </div>
                 <div className="ml-5 w-0 flex-1">
@@ -44,7 +45,7 @@ export default function AdminDashboard() {
               <div className="flex items-center">
                 <div className="flex-shrink-0">
                   <div className="w-8 h-8 rounded-md flex items-center justify-center" style={{ backgroundColor: 'var(--chart-2)' }}>
-                    <span className="text-sm font-medium" style={{ color: 'var(--primary-foreground)' }}>✓</span>
+                    <CheckCircle className="w-5 h-5" style={{ color: 'var(--primary-foreground)' }} />
                   </div>
                 </div>
                 <div className="ml-5 w-0 flex-1">
@@ -66,7 +67,7 @@ export default function AdminDashboard() {
               <div className="flex items-center">
                 <div className="flex-shrink-0">
                   <div className="w-8 h-8 rounded-md flex items-center justify-center" style={{ backgroundColor: 'var(--destructive)' }}>
-                    <span className="text-sm font-medium" style={{ color: 'var(--destructive-foreground)' }}>⚠</span>
+                    <AlertTriangle className="w-5 h-5" style={{ color: 'var(--destructive-foreground)' }} />
                   </div>
                 </div>
                 <div className="ml-5 w-0 flex-1">
@@ -88,7 +89,7 @@ export default function AdminDashboard() {
               <div className="flex items-center">
                 <div className="flex-shrink-0">
                   <div className="w-8 h-8 rounded-md flex items-center justify-center" style={{ backgroundColor: 'var(--chart-3)' }}>
-                    <span className="text-sm font-medium" style={{ color: 'var(--primary-foreground)' }}>P</span>
+                    <Building2 className="w-5 h-5" style={{ color: 'var(--primary-foreground)' }} />
                   </div>
                 </div>
                 <div className="ml-5 w-0 flex-1">

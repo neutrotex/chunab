@@ -2,6 +2,41 @@
 
 import { useState } from 'react';
 import AdminLayout from '@/component/AdminLayout';
+import { X, Edit, Trash2 } from 'lucide-react';
+
+interface Candidate {
+  id: string;
+  name: string;
+  gender: 'Male' | 'Female' | 'Other';
+  photoURL: string;
+  partyId: string;
+  education: string;
+  assetsWorth: number;
+  publicScoreRating: number;
+  constituencyId: string;
+  pastExperience: string;
+  agendas: string[];
+  criminalRecords: string[];
+  contactInfo: {
+    phone: string;
+    email: string;
+    address: string;
+  };
+}
+
+interface Party {
+  id: string;
+  name: string;
+  symbolURL: string;
+  candidateCount?: number;
+}
+
+interface Constituency {
+  id: string;
+  name: string;
+  district: string;
+  province: string;
+}
 
 interface CandidateFormData {
   name: string;
@@ -25,9 +60,9 @@ interface CandidateFormData {
 export default function AdminCandidates() {
   const [showForm, setShowForm] = useState(false);
   const [editingCandidate, setEditingCandidate] = useState<string | null>(null);
-  const [candidates, setCandidates] = useState<any[]>([]); // TODO: Replace with proper API data
-  const [parties, setParties] = useState<any[]>([]); // TODO: Replace with proper API data
-  const [constituencies, setConstituencies] = useState<any[]>([]); // TODO: Replace with proper API data
+  const [candidates, setCandidates] = useState<Candidate[]>([]); // TODO: Replace with proper API data
+  const [parties, setParties] = useState<Party[]>([]); // TODO: Replace with proper API data
+  const [constituencies, setConstituencies] = useState<Constituency[]>([]); // TODO: Replace with proper API data
   const [formData, setFormData] = useState<CandidateFormData>({
     name: '',
     gender: 'Male',
@@ -54,13 +89,13 @@ export default function AdminCandidates() {
     candidatesWithCriminalRecords: candidates.filter(c => c.criminalRecords?.length > 0).length
   };
 
-  const handleInputChange = (field: string, value: any) => {
+  const handleInputChange = (field: string, value: string | number) => {
     if (field.includes('.')) {
       const [parent, child] = field.split('.');
       setFormData(prev => ({
         ...prev,
         [parent]: {
-          ...(prev[parent as keyof CandidateFormData] as any),
+          ...(prev[parent as keyof CandidateFormData] as Record<string, string | number>),
           [child]: value
         }
       }));
@@ -213,6 +248,369 @@ export default function AdminCandidates() {
           </div>
         </div>
 
+        {/* Add/Edit Candidate Form */}
+        {showForm && (
+          <div className="transition-all duration-500 ease-out transform animate-in slide-in-from-top-4">
+            <div className="shadow rounded-lg p-6 mb-6" style={{ backgroundColor: 'var(--card)', borderColor: 'var(--border)' }}>
+              <div className="flex justify-between items-center mb-6">
+                <h3 className="text-xl font-semibold" style={{ color: 'var(--foreground)' }}>
+                  {editingCandidate ? 'Edit Candidate' : 'Add New Candidate'}
+                </h3>
+                <button
+                  onClick={() => {
+                    setShowForm(false);
+                    setEditingCandidate(null);
+                    resetForm();
+                  }}
+                  className="p-2 rounded-lg transition-colors"
+                  style={{ color: 'var(--muted-foreground)', backgroundColor: 'var(--muted)' }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.color = 'var(--foreground)';
+                    e.currentTarget.style.backgroundColor = 'var(--accent)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.color = 'var(--muted-foreground)';
+                    e.currentTarget.style.backgroundColor = 'var(--muted)';
+                  }}
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {/* Basic Information */}
+                  <div>
+                    <label className="block text-sm font-medium mb-2" style={{ color: 'var(--foreground)' }}>Name</label>
+                    <input
+                      type="text"
+                      value={formData.name}
+                      onChange={(e) => handleInputChange('name', e.target.value)}
+                      className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2"
+                      style={{ 
+                        backgroundColor: 'var(--input)', 
+                        borderColor: 'var(--border)', 
+                        color: 'var(--foreground)'
+                      }}
+                      required
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium mb-2" style={{ color: 'var(--foreground)' }}>Gender</label>
+                    <select
+                      value={formData.gender}
+                      onChange={(e) => handleInputChange('gender', e.target.value)}
+                      className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2"
+                      style={{ 
+                        backgroundColor: 'var(--input)', 
+                        borderColor: 'var(--border)', 
+                        color: 'var(--foreground)'
+                      }}
+                    >
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium mb-2" style={{ color: 'var(--foreground)' }}>Photo URL</label>
+                    <input
+                      type="url"
+                      value={formData.photoURL}
+                      onChange={(e) => handleInputChange('photoURL', e.target.value)}
+                      className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2"
+                      style={{ 
+                        backgroundColor: 'var(--input)', 
+                        borderColor: 'var(--border)', 
+                        color: 'var(--foreground)'
+                      }}
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium mb-2" style={{ color: 'var(--foreground)' }}>Party</label>
+                    <select
+                      value={formData.partyId}
+                      onChange={(e) => handleInputChange('partyId', e.target.value)}
+                      className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2"
+                      style={{ 
+                        backgroundColor: 'var(--input)', 
+                        borderColor: 'var(--border)', 
+                        color: 'var(--foreground)'
+                      }}
+                      required
+                    >
+                      <option value="">Select Party</option>
+                      {parties.map(party => (
+                        <option key={party.id} value={party.id}>{party.name}</option>
+                      ))}
+                      {parties.length === 0 && (
+                        <option value="" disabled>No parties available. Add parties first.</option>
+                      )}
+                    </select>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium mb-2" style={{ color: 'var(--foreground)' }}>Education</label>
+                    <input
+                      type="text"
+                      value={formData.education}
+                      onChange={(e) => handleInputChange('education', e.target.value)}
+                      className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2"
+                      style={{ 
+                        backgroundColor: 'var(--input)', 
+                        borderColor: 'var(--border)', 
+                        color: 'var(--foreground)'
+                      }}
+                      required
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium mb-2" style={{ color: 'var(--foreground)' }}>Assets Worth (NPR)</label>
+                    <input
+                      type="number"
+                      value={formData.assetsWorth}
+                      onChange={(e) => handleInputChange('assetsWorth', Number(e.target.value))}
+                      className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2"
+                      style={{ 
+                        backgroundColor: 'var(--input)', 
+                        borderColor: 'var(--border)', 
+                        color: 'var(--foreground)'
+                      }}
+                      required
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium mb-2" style={{ color: 'var(--foreground)' }}>Public Score Rating (0-10)</label>
+                    <input
+                      type="number"
+                      min="0"
+                      max="10"
+                      step="0.1"
+                      value={formData.publicScoreRating}
+                      onChange={(e) => handleInputChange('publicScoreRating', Number(e.target.value))}
+                      className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2"
+                      style={{ 
+                        backgroundColor: 'var(--input)', 
+                        borderColor: 'var(--border)', 
+                        color: 'var(--foreground)'
+                      }}
+                      required
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium mb-2" style={{ color: 'var(--foreground)' }}>Constituency</label>
+                    <select
+                      value={formData.constituencyId}
+                      onChange={(e) => handleInputChange('constituencyId', e.target.value)}
+                      className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2"
+                      style={{ 
+                        backgroundColor: 'var(--input)', 
+                        borderColor: 'var(--border)', 
+                        color: 'var(--foreground)'
+                      }}
+                      required
+                    >
+                      <option value="">Select Constituency</option>
+                      {constituencies.map(constituency => (
+                        <option key={constituency.id} value={constituency.id}>
+                          {constituency.name} - {constituency.district}, {constituency.province}
+                        </option>
+                      ))}
+                      {constituencies.length === 0 && (
+                        <option value="" disabled>No constituencies available. Load constituencies first.</option>
+                      )}
+                    </select>
+                  </div>
+                </div>
+
+                {/* Past Experience */}
+                <div>
+                  <label className="block text-sm font-medium mb-2" style={{ color: 'var(--foreground)' }}>Past Experience</label>
+                  <textarea
+                    value={formData.pastExperience}
+                    onChange={(e) => handleInputChange('pastExperience', e.target.value)}
+                    rows={3}
+                    className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2"
+                    style={{ 
+                      backgroundColor: 'var(--input)', 
+                      borderColor: 'var(--border)', 
+                      color: 'var(--foreground)'
+                    }}
+                    required
+                  />
+                </div>
+
+                {/* Agendas */}
+                <div>
+                  <label className="block text-sm font-medium mb-2" style={{ color: 'var(--foreground)' }}>Agendas</label>
+                  {formData.agendas.map((agenda, index) => (
+                    <div key={index} className="flex gap-2 mb-2">
+                      <input
+                        type="text"
+                        value={agenda}
+                        onChange={(e) => handleArrayChange('agendas', index, e.target.value)}
+                        className="flex-1 px-3 py-2 border rounded-md focus:outline-none focus:ring-2"
+                        style={{ 
+                          backgroundColor: 'var(--input)', 
+                          borderColor: 'var(--border)', 
+                          color: 'var(--foreground)'
+                        }}
+                        placeholder="Enter agenda"
+                      />
+                      <button
+                        type="button"
+                        onClick={() => removeArrayItem('agendas', index)}
+                        className="px-3 py-2 transition-colors"
+                        style={{ color: 'var(--destructive)' }}
+                        onMouseEnter={(e) => e.currentTarget.style.opacity = '0.8'}
+                        onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
+                      >
+                        Remove
+                      </button>
+                    </div>
+                  ))}
+                  <button
+                    type="button"
+                    onClick={() => addArrayItem('agendas')}
+                    className="transition-colors text-sm"
+                    style={{ color: 'var(--primary)' }}
+                    onMouseEnter={(e) => e.currentTarget.style.opacity = '0.8'}
+                    onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
+                  >
+                    + Add Agenda
+                  </button>
+                </div>
+
+                {/* Criminal Records */}
+                <div>
+                  <label className="block text-sm font-medium mb-2" style={{ color: 'var(--foreground)' }}>Criminal Records</label>
+                  {formData.criminalRecords.map((record, index) => (
+                    <div key={index} className="flex gap-2 mb-2">
+                      <input
+                        type="text"
+                        value={record}
+                        onChange={(e) => handleArrayChange('criminalRecords', index, e.target.value)}
+                        className="flex-1 px-3 py-2 border rounded-md focus:outline-none focus:ring-2"
+                        style={{ 
+                          backgroundColor: 'var(--input)', 
+                          borderColor: 'var(--border)', 
+                          color: 'var(--foreground)'
+                        }}
+                        placeholder="Enter criminal record description"
+                      />
+                      <button
+                        type="button"
+                        onClick={() => removeArrayItem('criminalRecords', index)}
+                        className="px-3 py-2 transition-colors"
+                        style={{ color: 'var(--destructive)' }}
+                        onMouseEnter={(e) => e.currentTarget.style.opacity = '0.8'}
+                        onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
+                      >
+                        Remove
+                      </button>
+                    </div>
+                  ))}
+                  <button
+                    type="button"
+                    onClick={() => addArrayItem('criminalRecords')}
+                    className="transition-colors text-sm"
+                    style={{ color: 'var(--primary)' }}
+                    onMouseEnter={(e) => e.currentTarget.style.opacity = '0.8'}
+                    onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
+                  >
+                    + Add Criminal Record
+                  </button>
+                </div>
+
+                {/* Contact Information */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium mb-2" style={{ color: 'var(--foreground)' }}>Phone</label>
+                    <input
+                      type="tel"
+                      value={formData.contactInfo.phone}
+                      onChange={(e) => handleInputChange('contactInfo.phone', e.target.value)}
+                      className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2"
+                      style={{ 
+                        backgroundColor: 'var(--input)', 
+                        borderColor: 'var(--border)', 
+                        color: 'var(--foreground)'
+                      }}
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium mb-2" style={{ color: 'var(--foreground)' }}>Email</label>
+                    <input
+                      type="email"
+                      value={formData.contactInfo.email}
+                      onChange={(e) => handleInputChange('contactInfo.email', e.target.value)}
+                      className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2"
+                      style={{ 
+                        backgroundColor: 'var(--input)', 
+                        borderColor: 'var(--border)', 
+                        color: 'var(--foreground)'
+                      }}
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium mb-2" style={{ color: 'var(--foreground)' }}>Address</label>
+                    <input
+                      type="text"
+                      value={formData.contactInfo.address}
+                      onChange={(e) => handleInputChange('contactInfo.address', e.target.value)}
+                      className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2"
+                      style={{ 
+                        backgroundColor: 'var(--input)', 
+                        borderColor: 'var(--border)', 
+                        color: 'var(--foreground)'
+                      }}
+                    />
+                  </div>
+                </div>
+
+                {/* Form Actions */}
+                <div className="flex justify-end space-x-3 pt-4">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setShowForm(false);
+                      setEditingCandidate(null);
+                      resetForm();
+                    }}
+                    className="px-4 py-2 text-sm font-medium rounded-md transition-colors"
+                    style={{ 
+                      backgroundColor: 'var(--muted)', 
+                      color: 'var(--muted-foreground)' 
+                    }}
+                    onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--accent)'}
+                    onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'var(--muted)'}
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    type="submit"
+                    className="px-4 py-2 text-sm font-medium rounded-md transition-colors"
+                    style={{ 
+                      backgroundColor: 'var(--primary)', 
+                      color: 'var(--primary-foreground)' 
+                    }}
+                    onMouseEnter={(e) => e.currentTarget.style.opacity = '0.9'}
+                    onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
+                  >
+                    {editingCandidate ? 'Update Candidate' : 'Add Candidate'}
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        )}
+
         {/* Candidates Table */}
         <div className="shadow rounded-lg" style={{ backgroundColor: 'var(--card)' }}>
           <div className="px-6 py-4 border-b" style={{ borderColor: 'var(--border)' }}>
@@ -290,24 +688,32 @@ export default function AdminCandidates() {
                               setEditingCandidate(candidate.id);
                               setShowForm(true);
                             }}
-                            className="mr-3 transition-colors"
+                            className="mr-3 p-2 rounded-lg transition-colors"
                             style={{ color: 'var(--primary)' }}
-                            onMouseEnter={(e) => e.currentTarget.style.opacity = '0.8'}
-                            onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
+                            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--muted)'}
+                            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
+                            title="Edit Candidate"
                           >
-                            Edit
+                            <Edit className="w-4 h-4" />
                           </button>
                           <button 
                             onClick={() => {
                               // TODO: Implement delete functionality
                               console.log('Delete candidate:', candidate.id);
                             }}
-                            className="transition-colors"
+                            className="p-2 rounded-lg transition-colors"
                             style={{ color: 'var(--muted-foreground)' }}
-                            onMouseEnter={(e) => e.currentTarget.style.color = 'var(--foreground)'}
-                            onMouseLeave={(e) => e.currentTarget.style.color = 'var(--muted-foreground)'}
+                            onMouseEnter={(e) => {
+                              e.currentTarget.style.color = 'var(--destructive)';
+                              e.currentTarget.style.backgroundColor = 'var(--muted)';
+                            }}
+                            onMouseLeave={(e) => {
+                              e.currentTarget.style.color = 'var(--muted-foreground)';
+                              e.currentTarget.style.backgroundColor = 'transparent';
+                            }}
+                            title="Delete Candidate"
                           >
-                            Delete
+                            <Trash2 className="w-4 h-4" />
                           </button>
                         </td>
                       </tr>
@@ -325,286 +731,6 @@ export default function AdminCandidates() {
           </div>
         </div>
 
-        {/* Add/Edit Candidate Modal */}
-        {showForm && (
-          <div className="fixed inset-0 overflow-y-auto h-full w-full z-50" style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
-            <div className="relative top-20 mx-auto p-5 border w-11/12 md:w-3/4 lg:w-1/2 shadow-lg rounded-md" style={{ backgroundColor: 'var(--card)', borderColor: 'var(--border)' }}>
-              <div className="mt-3">
-                <div className="flex justify-between items-center mb-4">
-                  <h3 className="text-lg font-medium" style={{ color: 'var(--foreground)' }}>
-                    {editingCandidate ? 'Edit Candidate' : 'Add New Candidate'}
-                  </h3>
-                  <button
-                    onClick={() => setShowForm(false)}
-                    className="transition-colors"
-                    style={{ color: 'var(--muted-foreground)' }}
-                    onMouseEnter={(e) => e.currentTarget.style.color = 'var(--foreground)'}
-                    onMouseLeave={(e) => e.currentTarget.style.color = 'var(--muted-foreground)'}
-                  >
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  </button>
-                </div>
-
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {/* Basic Information */}
-                    <div>
-                      <label className="block text-sm font-medium mb-2" style={{ color: 'var(--foreground)' }}>Name</label>
-                      <input
-                        type="text"
-                        value={formData.name}
-                        onChange={(e) => handleInputChange('name', e.target.value)}
-                        className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2"
-                        style={{ 
-                          backgroundColor: 'var(--input)', 
-                          borderColor: 'var(--border)', 
-                          color: 'var(--foreground)'
-                        }}
-                        required
-                      />
-                    </div>
-
-                    <div>
-                      <label className="block text-sm font-medium mb-2" style={{ color: 'var(--foreground)' }}>Gender</label>
-                      <select
-                        value={formData.gender}
-                        onChange={(e) => handleInputChange('gender', e.target.value)}
-                        className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2"
-                        style={{ 
-                          backgroundColor: 'var(--input)', 
-                          borderColor: 'var(--border)', 
-                          color: 'var(--foreground)'
-                        }}
-                      >
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
-                        <option value="Other">Other</option>
-                      </select>
-                    </div>
-
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Photo URL</label>
-                      <input
-                        type="url"
-                        value={formData.photoURL}
-                        onChange={(e) => handleInputChange('photoURL', e.target.value)}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
-                      />
-                    </div>
-
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Party</label>
-                      <select
-                        value={formData.partyId}
-                        onChange={(e) => handleInputChange('partyId', e.target.value)}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
-                        required
-                      >
-                        <option value="">Select Party</option>
-                        {parties.map(party => (
-                          <option key={party.id} value={party.id}>{party.name}</option>
-                        ))}
-                        {parties.length === 0 && (
-                          <option value="" disabled>No parties available. Add parties first.</option>
-                        )}
-                      </select>
-                    </div>
-
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Education</label>
-                      <input
-                        type="text"
-                        value={formData.education}
-                        onChange={(e) => handleInputChange('education', e.target.value)}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
-                        required
-                      />
-                    </div>
-
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Assets Worth (NPR)</label>
-                      <input
-                        type="number"
-                        value={formData.assetsWorth}
-                        onChange={(e) => handleInputChange('assetsWorth', Number(e.target.value))}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
-                        required
-                      />
-                    </div>
-
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Public Score Rating (0-10)</label>
-                      <input
-                        type="number"
-                        min="0"
-                        max="10"
-                        step="0.1"
-                        value={formData.publicScoreRating}
-                        onChange={(e) => handleInputChange('publicScoreRating', Number(e.target.value))}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
-                        required
-                      />
-                    </div>
-
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Constituency</label>
-                      <select
-                        value={formData.constituencyId}
-                        onChange={(e) => handleInputChange('constituencyId', e.target.value)}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
-                        required
-                      >
-                        <option value="">Select Constituency</option>
-                        {constituencies.map(constituency => (
-                          <option key={constituency.id} value={constituency.id}>
-                            {constituency.name} - {constituency.district}, {constituency.province}
-                          </option>
-                        ))}
-                        {constituencies.length === 0 && (
-                          <option value="" disabled>No constituencies available. Load constituencies first.</option>
-                        )}
-                      </select>
-                    </div>
-                  </div>
-
-                  {/* Past Experience */}
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Past Experience</label>
-                    <textarea
-                      value={formData.pastExperience}
-                      onChange={(e) => handleInputChange('pastExperience', e.target.value)}
-                      rows={3}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
-                      required
-                    />
-                  </div>
-
-                  {/* Agendas */}
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Agendas</label>
-                    {formData.agendas.map((agenda, index) => (
-                      <div key={index} className="flex gap-2 mb-2">
-                        <input
-                          type="text"
-                          value={agenda}
-                          onChange={(e) => handleArrayChange('agendas', index, e.target.value)}
-                          className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
-                          placeholder="Enter agenda"
-                        />
-                        <button
-                          type="button"
-                          onClick={() => removeArrayItem('agendas', index)}
-                          className="px-3 py-2 text-red-600 hover:text-red-800"
-                        >
-                          Remove
-                        </button>
-                      </div>
-                    ))}
-                    <button
-                      type="button"
-                      onClick={() => addArrayItem('agendas')}
-                      className="text-red-600 hover:text-red-800 text-sm"
-                    >
-                      + Add Agenda
-                    </button>
-                  </div>
-
-                  {/* Criminal Records */}
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Criminal Records</label>
-                    {formData.criminalRecords.map((record, index) => (
-                      <div key={index} className="flex gap-2 mb-2">
-                        <input
-                          type="text"
-                          value={record}
-                          onChange={(e) => handleArrayChange('criminalRecords', index, e.target.value)}
-                          className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
-                          placeholder="Enter criminal record description"
-                        />
-                        <button
-                          type="button"
-                          onClick={() => removeArrayItem('criminalRecords', index)}
-                          className="px-3 py-2 text-red-600 hover:text-red-800"
-                        >
-                          Remove
-                        </button>
-                      </div>
-                    ))}
-                    <button
-                      type="button"
-                      onClick={() => addArrayItem('criminalRecords')}
-                      className="text-red-600 hover:text-red-800 text-sm"
-                    >
-                      + Add Criminal Record
-                    </button>
-                  </div>
-
-                  {/* Contact Information */}
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Phone</label>
-                      <input
-                        type="tel"
-                        value={formData.contactInfo.phone}
-                        onChange={(e) => handleInputChange('contactInfo.phone', e.target.value)}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                      <input
-                        type="email"
-                        value={formData.contactInfo.email}
-                        onChange={(e) => handleInputChange('contactInfo.email', e.target.value)}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Address</label>
-                      <input
-                        type="text"
-                        value={formData.contactInfo.address}
-                        onChange={(e) => handleInputChange('contactInfo.address', e.target.value)}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
-                      />
-                    </div>
-                  </div>
-
-                  {/* Form Actions */}
-                  <div className="flex justify-end space-x-3 pt-4">
-                    <button
-                      type="button"
-                      onClick={() => setShowForm(false)}
-                      className="px-4 py-2 text-sm font-medium rounded-md transition-colors"
-                      style={{ 
-                        backgroundColor: 'var(--muted)', 
-                        color: 'var(--muted-foreground)' 
-                      }}
-                      onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--accent)'}
-                      onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'var(--muted)'}
-                    >
-                      Cancel
-                    </button>
-                    <button
-                      type="submit"
-                      className="px-4 py-2 text-sm font-medium rounded-md transition-colors"
-                      style={{ 
-                        backgroundColor: 'var(--primary)', 
-                        color: 'var(--primary-foreground)' 
-                      }}
-                      onMouseEnter={(e) => e.currentTarget.style.opacity = '0.9'}
-                      onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
-                    >
-                      {editingCandidate ? 'Update Candidate' : 'Add Candidate'}
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        )}
       </div>
     </AdminLayout>
   );

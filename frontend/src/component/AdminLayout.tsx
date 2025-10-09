@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import AdminSidebar from './AdminSidebar';
+import { Bell, ChevronDown } from 'lucide-react';
 
 interface AdminData {
   isAuthenticated: boolean;
@@ -89,9 +90,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
             <div className="flex items-center space-x-4">
               {/* Notifications */}
               <button className="p-2 rounded-lg transition-colors" style={{ color: 'var(--muted-foreground)' }} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--muted)'} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}>
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-5 5v-5zM4.828 7l2.586 2.586a2 2 0 002.828 0L12 7H4.828z" />
-                </svg>
+                <Bell className="w-5 h-5" />
               </button>
               
               {/* User Menu */}
@@ -103,9 +102,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
                     </span>
                   </div>
                   <span className="text-sm font-medium">{adminData?.email}</span>
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
+                  <ChevronDown className="w-4 h-4" />
                 </button>
               </div>
               
