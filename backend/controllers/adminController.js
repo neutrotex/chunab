@@ -1,4 +1,5 @@
 import Admin from "../models/adminModel.js";
+import LicenseKey from "../models/licenseKeyModel.js";
 import jwt from "jsonwebtoken";
 
 // Generate JWT token
@@ -8,10 +9,18 @@ const generateToken = (adminId) => {
     });
 };
 
-// Admin Registration
+// Admin Registration with License Key
 export const registerAdmin = async (req, res) => {
     try {
-        const { name, email, password, role } = req.body;
+        const { name, email, password, licenseKey } = req.body;
+
+        // Validate required fields
+        if (!name || !email || !password || !licenseKey) {
+            return res.status(400).json({
+                success: false,
+                message: "Name, email, password, and license key are required"
+            });
+        }
 
         // Check if admin already exists
         const existingAdmin = await Admin.findOne({ email });
@@ -22,15 +31,37 @@ export const registerAdmin = async (req, res) => {
             });
         }
 
+        // Find and validate license key
+        const license = await LicenseKey.findOne({ key: licenseKey });
+        if (!license) {
+            return res.status(400).json({
+                success: false,
+                message: "Invalid license key"
+            });
+        }
+
+        // Check if license key is valid and not used
+        if (!license.isValid()) {
+            return res.status(400).json({
+                success: false,
+                message: "License key is expired, inactive, or already used"
+            });
+        }
+
         // Create new admin
         const newAdmin = new Admin({
             name,
             email,
             password,
-            role: role || 'admin'
+            role: 'admin',
+            licenseKey: license._id
         });
 
         const savedAdmin = await newAdmin.save();
+
+        // Assign license key to admin
+        await license.assignToAdmin(savedAdmin._id, email);
+
         const token = generateToken(savedAdmin._id);
 
         res.status(201).json({
@@ -38,7 +69,8 @@ export const registerAdmin = async (req, res) => {
             message: "Admin registered successfully",
             data: {
                 admin: savedAdmin,
-                token
+                token,
+                permissions: license.permissions
             }
         });
 
@@ -104,7 +136,7 @@ export const loginAdmin = async (req, res) => {
 // Get admin profile
 export const getAdminProfile = async (req, res) => {
     try {
-        const admin = await Admin.findById(req.adminId);
+        const admin = await Admin.findById(req.adminId).populate('licenseKey', 'permissions expiresAt isUsed');
         if (!admin) {
             return res.status(404).json({
                 success: false,
@@ -119,6 +151,50 @@ export const getAdminProfile = async (req, res) => {
 
     } catch (error) {
         console.error("Error getting admin profile:", error);
+        res.status(500).json({
+            success: false,
+            message: "Internal server error",
+            error: error.message
+        });
+    }
+};
+
+// Get admin permissions
+export const getAdminPermissions = async (req, res) => {
+    try {
+        const admin = await Admin.findById(req.adminId).populate('licenseKey', 'permissions');
+        if (!admin) {
+            return res.status(404).json({
+                success: false,
+                message: "Admin not found"
+            });
+        }
+
+        let permissions = {};
+        
+        if (admin.role === 'super_admin') {
+            permissions = {
+                canManageCandidates: true,
+                canManageParties: true,
+                canViewAnalytics: true,
+                canManageUsers: true,
+                canCreateLicenseKeys: true,
+                canManageAdmins: true
+            };
+        } else if (admin.licenseKey && admin.licenseKey.permissions) {
+            permissions = admin.licenseKey.permissions;
+        }
+
+        res.status(200).json({
+            success: true,
+            data: {
+                permissions,
+                role: admin.role
+            }
+        });
+
+    } catch (error) {
+        console.error("Error getting admin permissions:", error);
         res.status(500).json({
             success: false,
             message: "Internal server error",

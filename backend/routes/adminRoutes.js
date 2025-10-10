@@ -3,9 +3,10 @@ import {
     registerAdmin, 
     loginAdmin, 
     getAdminProfile, 
-    updateAdminProfile 
+    updateAdminProfile,
+    getAdminPermissions
 } from "../controllers/adminController.js";
-import { authenticateAdmin, authorizeAdmin } from "../middleware/authMiddleware.js";
+import { authenticateAdmin, authorizeAdmin, requirePermission } from "../middleware/authMiddleware.js";
 
 const router = express.Router();
 
@@ -16,6 +17,7 @@ router.post("/login", loginAdmin);
 // Protected routes (require authentication)
 router.get("/profile", authenticateAdmin, getAdminProfile);
 router.put("/profile", authenticateAdmin, updateAdminProfile);
+router.get("/permissions", authenticateAdmin, getAdminPermissions);
 
 // Super admin only routes
 router.get("/all", authenticateAdmin, authorizeAdmin('super_admin'), async (req, res) => {

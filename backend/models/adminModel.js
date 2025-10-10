@@ -21,8 +21,13 @@ const adminSchema = new mongoose.Schema({
     },
     role: {
         type: String,
-        enum: ['super_admin', 'admin', 'moderator'],
+        enum: ['super_admin', 'admin'],
         default: 'admin'
+    },
+    licenseKey: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'LicenseKey',
+        default: null
     },
     isActive: {
         type: Boolean,

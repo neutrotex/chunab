@@ -5,6 +5,10 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import userRoutes from "./routes/userRoutes.js";
 import adminRoutes from "./routes/adminRoutes.js";
+import superAdminRoutes from "./routes/superAdminRoutes.js";
+import partyRoutes from "./routes/partyRoutes.js";
+import candidateRoutes from "./routes/candidateRoutes.js";
+import constituencyRoutes from "./routes/constituencyRoutes.js";
 
 dotenv.config();
 
@@ -29,6 +33,10 @@ app.get("/", (req, res) => {
 
 app.use("/api/users", userRoutes);
 app.use("/api/admin", adminRoutes);
+app.use("/api/super-admin", superAdminRoutes);
+app.use("/api/parties", partyRoutes);
+app.use("/api/candidates", candidateRoutes);
+app.use("/api/constituencies", constituencyRoutes);
 
 app.listen(port, () => { 
     console.log(`Server Running on port ${port}`);
