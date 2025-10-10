@@ -319,8 +319,7 @@ export default function ElectionGuide() {
                         <div>
                         <h3 className="text-xl font-bold mb-2">Government Formation</h3>
                         <p className="text-muted-foreground">
-                            The elected House of Representatives forms the government, choosing the Prime Minister and Council
-                            of Ministers.
+                            The elected House of Representatives forms the government.
                         </p>
                         </div>
                     </div>
